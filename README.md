@@ -15,12 +15,12 @@
 
 </span>
 
-
 <!-- Readme Header -->
 
 <div align="center">
-  <img src="assets/images/readme_header.png" alt="header-image" width="800" height="400">
+  <img src="assets/images/password_header.jpeg" alt="header-image" width="800" height="200">
 </div>
+
 
 <!-- PROJECT LOGO -->
 <br />
@@ -47,7 +47,6 @@
     .
   </p>
 </div>
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -79,8 +78,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://github.com/Matt-Jones-Developer/password_generator)
 
 TODO:
 
@@ -133,9 +130,14 @@ N/A
 
 N/A
 
+
+----------------------------------
+
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+[![Product Name Screen Shot][product-screenshot]](https://github.com/Matt-Jones-Developer/password_generator)
 
 Screenshot of the programs output:
 
@@ -143,7 +145,7 @@ Screenshot of the programs output:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+----------------------------------
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -155,6 +157,15 @@ Screenshot of the programs output:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+<!-- UX/UI DESIGN -->
+## UX/UI Design
+
+Screenshot of the web apps UI design stage:
+
+[![Design Screen Shot][wireframe-screenshot]](https://github.com/Matt-Jones-Developer/password_generator)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- CONTRIBUTING -->
@@ -209,8 +220,9 @@ Deployed Project Link: [https://matt-jones-developer.github.io/password_generato
 [license-url]: https://github.com/Matt-Jones-Developer/password_generator/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: www.linkedin.com/in/matt-jones-zx81
-[product-screenshot]: images/Screenshot.png
-[console-output-screenshot]: images/console_output_screenshot.png
+[product-screenshot]: assets/images/app_screenshot.png
+[console-output-screenshot]: assets/images/console_output_screenshot.png
+[wireframe-screenshot]: assets/images/wireframing_screenshot.png
 [javascript-url]: https://www.javascript.com
 [html5-url]: https://html5.org/
 [css-url]: https://www.w3.org/Style/CSS/Overview.en.html
