@@ -25,8 +25,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Matt-Jones-Developer/Console-Finances">
-    <img src="images/js_logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/Matt-Jones-Developer/password_generator">
+    <img src="images/keyng-icon_sml.png" alt="Logo" width="80" height="80">
   </a>
 
 <h2 align="center">Professional Password Generator</h2>
@@ -34,7 +34,7 @@
   <p align="center">
     A simple GUI that a allows a user to create a unique password.  Coded in JS with HTML and CSS GUI.
     <br />
-    <a href="https://github.com/Matt-Jones-Developer/Console-Finances/"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Matt-Jones-Developer/password_generator/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/Matt-Jones-Developer/password_generator">View Project</a>
