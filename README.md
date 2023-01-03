@@ -19,14 +19,14 @@
 <!-- Readme Header -->
 
 <div align="center">
-  <img src="images/readme_header.png" alt="header-image" width="800" height="400">
+  <img src="assets/images/readme_header.png" alt="header-image" width="800" height="400">
 </div>
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/Matt-Jones-Developer/password_generator">
-    <img src="images/keyng-icon_sml.png" alt="Logo" width="80" height="80">
+    <img src="assets/images/keyng-icon_sml.png" alt="Logo" width="80" height="80">
   </a>
 
 <h2 align="center">Professional Password Generator</h2>
@@ -180,7 +180,7 @@ Project Repo Link: [https://github.com/Matt-Jones-Developer/password_generator](
 
 ## TODO! ...
 
-Deployed Project Link: [https://github.com/Matt-Jones-Developer/Console-Finances](https://github.com/Matt-Jones-Developer/Console-Finances)
+Deployed Project Link: [https://matt-jones-developer.github.io/password_generator](https://matt-jones-developer.github.io/password_generator)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
