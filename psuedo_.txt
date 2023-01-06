@@ -1,0 +1,85 @@
+// Assignment notes 
+
+// console log as you go !! label the logs so you can see whats happening 
+
+// use DEBUGGER - STEP THROUGH EACH TO CONFIRM 
+
+// 1 prompt and 4 confirms  - don't add alerts until the app works in the console 
+
+// specifically saying OK (true) CANCEL (false) - concatenate those selections to a single var
+
+// concat special characters/whatever is selected 
+
+// check for IF I HAVE NO SPECIAL OR SELECTED CHARS BY USER - THEN RUN THE GENNY AGAIN 
+
+// IF USER cancels on all 3 boooleans - must alert "you must choose at least 1 character type"
+
+// .concat - smush arrays into one - NOTE: The concat() method does not change the existing arrays but instead returns a new array.
+
+// spread ?
+
+// randomly select indexes/chars and DO SOMETHING WITH THEM ()
+
+// Displaying the password onto the page 
+
+// understanding how to structure some functions out; calling them etc 
+
+
+Assignment Criteria:
+
+
+1. function that prompts user for password options
+
+- password criteria prompts :
+
+   1     - what length of password would you like?
+        (RULE: must be between 10 and 64)
+
+
+        /DONE/ user types in a number between 10 and 64 
+        /DONE/ if num LESS THAN 10 -> retry 
+        /DONE/ if num GREATER THAN 64 -> retry (use ||)
+        /DONE/ catch no number entered with a retry too (NULL/etc)
+
+        // BUG 1: IF user adds a special char - it allows it!
+        = PARSEINT!!
+
+    
+
+   2     - would user like :
+    - lowercase?
+    - uppercase?
+    - numeric?
+    - special?
+
+    * program must validate each input 
+    * and must enter at least one character (min 10!)
+    * and at least one character type must be selected  
+
+
+
+
+
+2. function for getting random element from array 
+
+
+
+3. function to generate a password with user input 
+
+
+
+4. Get references to the #generate element 
+
+
+
+
+5. print password to the #password input 
+
+
+
+
+6. Add event listener to Generate Button 
+
+- when clicked it will generate a password  
+- must be printed into the password textfield box
+- must be printed via an alert (optional)
