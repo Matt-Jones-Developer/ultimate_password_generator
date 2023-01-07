@@ -1,41 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/img/keyng-icon_sml.png" type="image/icon type">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:300,400,600,800,900' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,600,800,900' rel='stylesheet'>
     <title>Pro Password Generator</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-    <body>
-        <div class="wrapper">
-            <header>
-            <h1>Ultimate Password Generator</h1>
-            </header>
-            <div class="card">
-            <div class="card-header">
-                <h2>Generate a Password</h2>
+
+<body>
+    <!-- navbar: user log-in / navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-left">
+                <img src="./assets/images/icons/icn_rocket_wht.svg" alt="rocket-icn">
+                <a href="https://github.com/Matt-Jones-Developer">glitchy corp &copy;</a>
             </div>
-            <div class="card-body">
-                <textarea
-                readonly
-                id="password"
-                placeholder="Your Secure Password"
-                aria-label="Generated Password"
-                ></textarea>
-            </div>
-            <div class="card-footer">
-                <button id="generate" class="btn">Generate Password</button>
-            </div>
+            <div class="nav-items">
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <!-- todo - add an about/how to section - may be pointless though! -->
+                    <!-- <li><a href="index.html">about</a></li>
+                    <li><a href="index.html">generate</a></li> -->
+                    <li><a href="index.html">log-in</a>
+                        <button id="login"><img src="./assets/images/icons/icn_login_wht.svg" alt="login-icn"></button>
+                    </li>
+
+                </ul>
             </div>
         </div>
-        <!-- <script src="./assets/scripts/main.js"></script>    -->
-        <!-- <script src="./assets/scripts/if_else.js"></script> -->
-        <!-- <script src="./assets/scripts/array.js"></script> -->
-        <!-- <script src="./assets/scripts/do_while_alternative.js"></script> -->
-        <!-- <script src="./assets/scripts/function_no_recall.js"></script> -->
-        <script src="./assets/scripts/tests.js"></script>   
-    </body>
-</html>
+    </nav>
+    <!-- page wrapper - required? No. -->
+    <div class="wrapper">
+        <!-- project header -->
+        <header class="header">
+            <div class="container">
+                <h1>Ultimate Password Generator</h1>
+                <h3>Welcome, Username!</h3>
+            </div>
+        </header>
+        <!-- section: generator box -->
+        <section class="generator">
+            <div class="container">
+                <div class="boxes">
+                    <div class="box">
+                        <!-- card -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Generate Password</h2>
+                            </div>
+                            <div class="card-body">
+                                <textarea readonly id="password" placeholder="Your Secure Password"
+                                    aria-label="Generated Password"></textarea>
+                            </div>
+                            <div class="copy-strip">
+                                <!-- copy pw button icon -->
+                                <h4>Copy to clipboard</h4>
+                                <button id="copy" class="btn_copy">
+                                    <img src="./assets/images/icons/icn_add_circle_wht.svg" alt="copy-icn">
+                                </button>
+                            </div>
+                            <!-- generate button -->
+                            <div class="card-footer">
+                                <button id="generate" class="btn">GENERATE</button>
+                            </div>
+                        </div>
+                        <!-- end card -->
+                    </div>
+                </div>
+                <!-- end boxes -->
+            </div>
+        </section>
+        <footer class="footer">
+            <!-- footer social icons -->
+            <div class="footer-icons">
+                <ul class="ul-icons">
+                    <li><a href="#"><img src="./assets/images/icons/icn_mail_wht.svg" width="24px" height="24px"
+                                alt="mail-icn"></a></li>
+                    <li><a href="https://github.com/Matt-Jones-Developer" class="git-icn"><img
+                                src="./assets/images/icons/github_icn_wht.svg" width="24px" height="24px"
+                                alt="github-icn"></a></li>
+                    <li><a href="https://glitchygames.slack.com"><img src="./assets/images/icons/slack_color.svg"
+                                width="24px" height="24px" alt="slack-icn"></a></li>
+                    <li><a href="https://twitter.com/glitchy81_dev"><img src="./assets/images/icons/icn_twitter_wht.svg"
+                                width="24px" height="24px" alt="twitter-icn"></a></li>
+                    <li><a href="https://www.linkedin.com/in/matt-jones-zx81/"><img src="./assets/images/icons/icn_linkedin.svg" width="24px" height="24px"
+                                alt="linkedin-icn"></a></li>
+                </ul>
+            </div>
+            <div class="footer-text">
+                <p>
+                    Designed & <code style="color:#A0FCD6;">coded</code> with <strong>love</strong>
+                    by <a href="https://github.com/Matt-Jones-Developer">Matt Jones</a>. &copy; 2022. All rights
+                    reserved.
+                </p>
+                <br>
+            </div>
+        </footer>
+    </div>
+    <!-- <script src="./assets/scripts/main.js"></script>    -->
+    <!-- <script src="./assets/scripts/if_else.js"></script> -->
+    <!-- <script src="./assets/scripts/array.js"></script> -->
+    <!-- <script src="./assets/scripts/do_while_alternative.js"></script> -->
+    <!-- <script src="./assets/scripts/function_no_recall.js"></script> -->
+    <script src="./assets/scripts/tests.js"></script>
+</body>
 
+</html>
