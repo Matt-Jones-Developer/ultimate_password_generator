@@ -11,10 +11,18 @@ let numbers = [1,2,3,4,5]
 // 'number' is the element from the array we want to give the function to the map
 
 let newArrayFromMap = numbers.map(function(number) {
+    // new array to store random seq
 
-    // add 10 to each number and add it to the new array
+    let randomArray = [Math.floor(Math.random() * number.length)]
+
+    // return randomIndex;
+    console.log(`num typeOf: ${typeof (number)}`)
+    console.log(`randomIndex typeOf: ${typeof (randomArray)}`)
+
+     // add 10 to each number and add it to the new array
     return number + 10
 })
+
 
 console.log(newArrayFromMap)
 
@@ -28,4 +36,4 @@ for (let i = 0; i < numbers.length; i++) {
     
 }
 
-console.log(newNoMapArray)
+// console.log(newNoMapArray)

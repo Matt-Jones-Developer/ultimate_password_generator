@@ -92,7 +92,13 @@ The starter code had a basic GUI design which I developed and improved upon by a
 
 I wanted to offer a simple log-in feature that allows a user to 'dummy log-in' to set a custom welcome message to the user.  It is something I learnt whilst studying JavaScript intro tutorials that were provided by the bootcamp, so thought it would be a great opportunity to add some flair points to the project. The final version of this app will have a working backend data base - enabling users to actually login, register and create usernames and passwords.  This is a future update, coming soon. 
 
-I am happy with how the app looks, its fully mobile and tablet responsive and I am very glad I took a break from the logic side of the task halfway through to actually customise the app and make it unique.  This was in accordance with my initial wireframing and UX design features and improvements that I designed before starting out this project.
+I hated how the alerts/prompts immediately locked out the page, so I felt the addition of a 'get started button' was a necessity.
+
+I still have the prompts and alerts (as per the criteria) so I hope this will not affect my grade.  It was a UX design choice that I had to make.
+
+Adding this button created a new set of bugs and problems, but I got through it and fixed them.
+
+I am happy with how the app looks, its fully mobile and tablet responsive and I am very glad I took a break from the logic side of the task halfway through to actually customise the app and make it unique.  This was in accordance with my initial wireframing and UX design features and improvements that I designed before starting out this project.  I am extremely proud of this effort!
 
 The main criteria involved using vanilla JavaScript only, so I started off by pseudo-coding the entire logical steps for the program to work as intended.  I find my pseudo is slowly improving, however I usually miss steps that then lead to bugs, however I really enjoy getting stuck in to solving them, so I am sure I will improve as time goes on.
 
@@ -105,6 +111,8 @@ I intend to be an excellent programmer one day and I am a firm believer that pra
 There is always time for reminders using google once I am a better programmer, but I always want to be the brain coming up with the solutions to problems, it's more rewarding but it does take longer, and look forward to becoming as competent in programming as I am with website design and development.
 
 #
+
+<!-- the product -->
 
 ## The Product
 
@@ -134,15 +142,12 @@ Product screenshot:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-### Built With
+### Built With:
 
-![js-logo]::: [![JavaScript]][javascript-url] 
+<!-- languages logos -->
 
+![js-logo]::: [![JavaScript]][javascript-url] ![html5-logo]::: [![HTML5]][html5-url] ![css-logo]::: [![CSS]][css-url]
 
-![html5-logo]::: [![HTML5]][html5-url]
-
-
-![css-logo]::: [![CSS]][css-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

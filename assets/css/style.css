@@ -80,6 +80,7 @@ h4 {
 }
 
 p {
+  font-family: 'Nunito', sans-serif;
   color: --light;
 }
 
@@ -124,6 +125,17 @@ span {
   font-weight: 900;
 }
 
+
+button[disabled] {
+  cursor: default;
+  background: #c0c7cf;
+}
+
+button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
 textarea {
   margin: 2rem 0 0 0;
   width: 100%;
@@ -139,6 +151,7 @@ textarea {
 
 ::placeholder {
   font-family: 'nunito', sans-serif;
+  font-weight: 900;
   letter-spacing: .5rem;
   color: var(--light);
   opacity: 1;
@@ -152,9 +165,6 @@ textarea {
   color: var(--light);
 }
 
-button:hover {
-  color: #6CE0F8;
-}
 
 /* main elements */
 
@@ -258,8 +268,28 @@ button:hover {
 .header {
   text-align: center;
   padding: 2rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
   color: hsl(206, 17%, 28%);
+}
+
+/* get started header button */
+
+#btn-start {
+  color: var(--dark);
+  background-color: var(--highlight);
+  font-size: 22px;
+  font-weight: 900;
+  border-radius: 1rem;
+  border: none;
+  padding: .3rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+#btn-start:hover {
+  color: var(--light);
+  background-color: #777;
 }
 
 
@@ -274,6 +304,7 @@ button:hover {
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+  padding-top: 0;
 }
 
 .card-header::after {
@@ -319,11 +350,12 @@ button:hover {
   background-color: transparent;
   /* todo: have the button change color */
   border: none;
+  cursor: pointer;
 }
 
 /* gen btn */
 
-.btn {
+.btn-gen {
   border: none;
   background-color: rgb(0, 255, 225);
   border-radius: 5rem;
@@ -339,14 +371,11 @@ button:hover {
   text-align: center;
   cursor: pointer;
 }
-/* 
-btn:hover {
-  color: var(--highlight);
-} */
 
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
+
+.btn-gen:hover {
+  color: var(--light);
+  background-color: #777;
 }
 
 #password {
@@ -375,9 +404,9 @@ button[disabled] {
 .footer {
   height: 3rem;
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
-  padding-top: 3rem;
+  padding-top: 2rem;
 }
 
 .footer strong {
