@@ -13,16 +13,17 @@
 // check for IF I HAVE NO SPECIAL OR SELECTED CHARS BY USER - THEN RUN THE GENNY AGAIN 
 
 // IF USER cancels on all 3 boooleans - must alert "you must choose at least 1 character type"
+// and then re run the function!
 
-// .concat - smush arrays into one - NOTE: The concat() method does not change the existing arrays but instead returns a new array.
+// .concat - create new array from others (into one) - NOTE: The concat() method does not change the existing arrays but instead returns a new array.
 
-// spread ?
+// spread ? possible option 
 
 // randomly select indexes/chars and DO SOMETHING WITH THEM ()
 
 // Displaying the password onto the page 
 
-// understanding how to structure some functions out; calling them etc 
+// understanding how to structure some functions out; calling them etc - esp calling a function again (not within itself)
 
 
 Assignment Criteria:
@@ -35,33 +36,118 @@ Assignment Criteria:
    1     - what length of password would you like?
         (RULE: must be between 10 and 64)
 
-
         /DONE/ user types in a number between 10 and 64 
         /DONE/ if num LESS THAN 10 -> retry 
         /DONE/ if num GREATER THAN 64 -> retry (use ||)
         /DONE/ catch no number entered with a retry too (NULL/etc)
 
         // BUG 1: IF user adds a special char - it allows it!
-        = PARSEINT!!
+        = Number and ParseInt!! + reassign the var, not adding to it 
+
+        // create an empty var called pwLength
+        // use func getPasswordOptions:
+          // create a var with a prompt "please choose number"
+          // if num < 10 or > 64 - Alert "ERROR" -> retry
+          // if retry, -> must re-run function
+          // else: add the number to pwLength 
+          // update user 
+
+          // Try both if else and/or while loop (may need to help retry?)
+          -> keeps looping until user enters correctly?
 
     
 
-   2     - would user like :
+   2    -  would user like :
     - lowercase?
     - uppercase?
     - numeric?
     - special?
 
     * program must validate each input 
-    * and must enter at least one character (min 10!)
-    * and at least one character type must be selected  
+    * and must enter at least one type
 
+    // 4 x confirms (boolean) as variables 
+    // if vars === true; concat arrays to new array
+    // else -> retry (error alert: you must select at least 1 type)
+    // re run the function - hmm, we may want to have another function that re-calls these 2?
 
+Overcoming bugs! (and re-learning if else)
+     // IF NONE selected -> retry/else clause 
+     // IF 1 or more or ALL selected -> continue 
+
+     // the if else BUG:
+     type options:
+     1: all selected - OK
+**** 2: lower selected - "must choose 1 type alert" bug - then OK
+**** 3: upper selected - "must choose 1 type alert" bug - then OK
+**** 4: special selected - "must choose 1 type alert" bug - then OK
+     5: numeric selected - OK (its the last IF so thats why)
+**** 6: lower + upper - "must choose 1 type alert" bug - then OK
+**** 7: lower + special - "must choose 1 type alert" bug - then OK
+     8: lower + numeric - OK (the first and the last - OK?)
+**** 9: upper + special - "must choose 1 type alert" bug - then OK
+     10: upper + numeric - OK (the second and the last - OK?)
+     11: special + numeric - OK (the third and the last - OK?)
+     12: NONE selected - OK (else invoked, restarts function as expected)
+
+So, we get the bug on:
+-- lower, upper, special ONLY
+-- lower + upper 
+-- lower + special 
+-- upper + special 
+
+IF NONE, ALL, or any with NUMERIC or just NUMERIC = TRUE: OK! 
+
+// we can see that my hacky logic adding a final else is to blame! (I think)
+
+If I remove the last else: results change:
+
+****
+solved (partially)
+
+- all the type selections work
+- BUT !! NONE ignores the alert, then repeats the types - once more - then exits!!
+
+// moved the alert into the call function (from the else if above)
+- now the alert shows! BUT!!! when you retry, it will exit on second time 
+
+Ugh.  I feel that a while loop would solve this, given I cannot find what the problem is here.
+It needs to always loop (until false) over the 'enter 1 type at least' else/ re call function - currently an else if
+
+********
+SOLVED (so close!!) haha - simple error where I had added an else if with a strange hack statement which 'appeared to fix' the issue, 
+when in fact it was a simple case of moving the alert OUTSIDE of the else that calls the callOptions()
+********
+
+// looks great, UNTIL we find yet ANOTHER BUG::
+// IF partial types selected; it now displays the callOptions ELSE, twice!?
+// callOptions states that IF array === 0; callPasswordOptions again, ELSE update the user with their selection info
+
+// so, what is happening now?
+
+// 
+
+     1: all selected - OK
+**** 2: lower selected - "you have selected chars and types" TWICE bug - then OK
+**** 3: upper selected - "you have selected chars and types" TWICE bug - then OK
+**** 4: special selected - "you have selected chars and types" TWICE bug - then OK
+     5: numeric selected - OK (its the last IF so thats why)
+**** 6: lower + upper - "you have selected chars and types" TWICE bug - then OK
+**** 7: lower + special - "you have selected chars and types" TWICE bug - then OK
+     8: lower + numeric - OK (the first and the last - OK?)
+**** 9: upper + special - "you have selected chars and types" TWICE bug - then OK
+     10: upper + numeric - OK (the second and the last - OK?)
+     11: special + numeric - OK (the third and the last - OK?)
+     12: NONE selected - OK fixed and loops correctly (no while needed)
 
 
 
 2. function for getting random element from array 
 
+     // map? or for loop - to iterate over array 
+     // iterate over optionsArray and pull a random digit (Math.random)
+     // put into a new array (randomArray)
+     // repeat pwLength times!
 
 
 3. function to generate a password with user input 
