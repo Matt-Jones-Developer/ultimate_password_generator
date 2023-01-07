@@ -1,5 +1,49 @@
 // password generator program
 
+// add user login name 
+// create vars for button and heading 
+let loginBtn = document.querySelector('button');
+let welcomeHeading = document.querySelector('div.header-welcome #user');
+
+// ** THIS WILL BE CHANGED TO USE THE LOG-IN BUTTON OR A TAG IN THE NAVBAR!! ** 
+
+// create setUserName() function
+//func     // name
+function setUserName() {
+    // constant var myName which prompts on load
+    const myName = prompt('Please enter your username.');
+
+    // conditional
+    if (!myName) {
+        // run again 
+        setUserName();
+    } else {
+        // store new value
+        localStorage.setItem('name', myName);
+        // on which element?
+        // welcomeHeading.textContext = `Welcome, ${myName}!`;
+        welcomeHeading.innerHTML = 'Welcome,  ' + myName + '!';
+    }
+}
+
+// call the expression on-load (todo: make it a function)
+// if localstorage has name - call setUserName()
+if (!localStorage.getItem('name')) {
+    // update user with welcome alert
+    // Display anti-boomer welcome message!
+    alert('Welcome to Ultimate Password Generator!\nPlease login to get started.');
+    
+} else {
+    // else retrieve stored name and display it
+    let storedName = localStorage.getItem('name');
+    welcomeHeading.innerHTML = 'Welcome,  ' + storedName + '!';
+}
+
+// on-click event handler 
+loginBtn.onclick = () => {
+    setUserName();
+}
+
 // Global scope variables
 
 // Array of special characters to be included in password
@@ -108,10 +152,11 @@ let optionsArray = [];
 // additional tracker array to store types - for fun!
 let typesSelected = [];
 
+// we need another button to 'start generation' - else the login isn't allowed!
 // PROMPTS
 
 // call it
-getPasswordLength()
+// getPasswordLength()
 
 // the function
 function getPasswordLength() {
@@ -136,7 +181,7 @@ function getPasswordLength() {
 }
 
 // call getPasswordOptions
-getPasswordOptions()
+// getPasswordOptions()
 
 // create another function for the boolean options (unless I can merge?)
 function getPasswordOptions() {
@@ -226,11 +271,11 @@ function callOptions() {
 }
 
 // call main
-callOptions()
+// callOptions()
 
 
 // get random 
-getRandom()
+// getRandom()
 // Function for getting a random element from an array
 function getRandom() {
     // pick a char from newArray pwLength times

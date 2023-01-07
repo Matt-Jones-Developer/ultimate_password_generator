@@ -18,7 +18,7 @@
 <!-- Readme Header -->
 
 <div align="center">
-  <img src="assets/images/password_header.jpeg" alt="header-image" width="800" height="200">
+  <img src="assets/images/password_header.png" alt="header-image" width="800" height="200">
 </div>
 
 
@@ -29,10 +29,12 @@
     <img src="assets/images/keyng-icon_sml.png" alt="Logo" width="80" height="80">
   </a>
 
-<h2 align="center">Professional Password Generator</h2>
+#
+<h2 align="center">Ultimate Password Generator</h2>
 
   <p align="center">
-    A simple GUI that a allows a user to create a unique password.  Coded in JS with HTML and CSS GUI.
+    A simple webapp that a allows a user to create a unique password.  They can also log-in and change their username.
+    Coded in vanilla JavaScript with an HTML and CSS interactive GUI.
     <br />
     <a href="https://github.com/Matt-Jones-Developer/password_generator/"><strong>Explore the docs »</strong></a>
     <br />
@@ -47,6 +49,8 @@
     .
   </p>
 </div>
+
+#
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -83,9 +87,30 @@ TODO:
 
 ## Overview
  
-This week’s challenge requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
+I was assigned the task of building a password generator web app.
+The starter code had a basic GUI design which I developed and improved upon by adding my own styling and images.  I wanted to make the app really 'pop' so I used modern colours, created a blurred filter background of a cryptographic code image, added a simple navbar, header and footer. 
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
+I wanted to offer a simple log-in feature that allows a user to 'dummy log-in' to set a custom welcome message to the user.  It is something I learnt whilst studying JavaScript intro tutorials that were provided by the bootcamp, so thought it would be a great opportunity to add some flair points to the project. The final version of this app will have a working backend data base - enabling users to actually login, register and create usernames and passwords.  This is a future update, coming soon. 
+
+I am happy with how the app looks, its fully mobile and tablet responsive and I am very glad I took a break from the logic side of the task halfway through to actually customise the app and make it unique.  This was in accordance with my initial wireframing and UX design features and improvements that I designed before starting out this project.
+
+The main criteria involved using vanilla JavaScript only, so I started off by pseudo-coding the entire logical steps for the program to work as intended.  I find my pseudo is slowly improving, however I usually miss steps that then lead to bugs, however I really enjoy getting stuck in to solving them, so I am sure I will improve as time goes on.
+
+I have included my 'working.js' file to show you the amount of work I put into to figuring out the solutions for myself, rather than relying on others or google.  I did contact AskBCS a couple of times for some minor bugs (they were tiny errors on my part) and feel that I deserved to have some assistance in ironing them out.
+
+Yes, the working.js file is messy, unreadable in places, but it got my program to where it is now.  I finally ironed out a lot of these bugs and even refactored older code into better ideas as they cropped up.
+
+I intend to be an excellent programmer one day and I am a firm believer that practice and hard work will get me there.  
+
+There is always time for reminders using google once I am a better programmer, but I always want to be the brain coming up with the solutions to problems, it's more rewarding but it does take longer, and look forward to becoming as competent in programming as I am with website design and development.
+
+#
+
+## The Product
+
+Product screenshot:
+
+[![Product Name Screen Shot][product-screenshot]](https://github.com/Matt-Jones-Developer/password_generator)
 
 ## Criteria
 
@@ -99,49 +124,76 @@ The password can include special characters. If you’re unfamiliar with these, 
       * Uppercase
       * Numeric
       * Special characters ($@%&*, etc)
+      
+
   * Code should validate for each input and at least one character type should be selected
   * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
+
+#
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ### Built With
 
-* [![JavaScript]][javascript-url]
-* [![HTML5]][html5-url]
-* [![CSS]][css-url]
+![js-logo]::: [![JavaScript]][javascript-url] 
+
+
+![html5-logo]::: [![HTML5]][html5-url]
+
+
+![css-logo]::: [![CSS]][css-url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+#
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
 This very simple console and GUI application can be accessed through your web browser, you can also see the JS working under the hood by entering the console!
-Please open main.js within the scripts folder to view my JS code. 
 
+When you first load the page, it will offer a tip to click the log-in button to add a username.
+Once your name is stored to the cache, it will remember it.  To change it again, just press 'log-in' button again.
+
+To create a new password, hit the 'get started' button.
+You will be presented with a series of prompts (as per the brief criteria!!) that refine you password length, what types you want to include and some helpful user feedback alerts to keep you on track!
+
+Once complete, you hit the GENERATE button - the password generated will be printed to the textfield, ready for you to copy and paste.
+
+As another UX feature, I wanted the user to be able to quick copy the password, using the '+' icon - I am really happy with the UX flow on this and feel that whilst alerts and prompts wouldn't be my first choice, they work quite well and it's fun to use. 
+
+Please open main.js within the scripts folder to view my JS code. 
+You can also see my working.js for all the tinkering and coding revisions I made to reach my solutions.
+
+#
 ### Prerequisites
 
 N/A
 
+#
 
 ### Installation
 
-N/A
+No installation required.  Just load your browser.  If you want to change your username, just hit 'log-in'.
+
+If you clear your browsers cache, it will offer the first 'welcome alert' that will advise you to start out by hitting the 'log-in' button.
 
 
 ----------------------------------
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Usage and Screenshots
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/Matt-Jones-Developer/password_generator)
+Screenshot of the programs output
+Fully responsive design:
 
-Screenshot of the programs output:
+![tablet-screenshot1]
+![mobile-screenshot2]![mobile-screenshot1]
 
-[![Product Name Screen Shot][console-output-screenshot]](https://github.com/Matt-Jones-Developer/password_generator)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -151,9 +203,9 @@ Screenshot of the programs output:
 ## Roadmap
 
 1. complete all initial criteria
-2. improve on the existing features and add new ones
-3. improve the UI and add my UX design principles 
-4. build an advanced user log-in backend database that stores all the user data 
+2. improve on the existing features and add new ones [DONE]
+3. improve the UI and add my UX design principles [DONE]
+4. build an advanced user log-in backend database that stores all the user data [TODO]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -220,9 +272,15 @@ Deployed Project Link: [https://matt-jones-developer.github.io/password_generato
 [license-url]: https://github.com/Matt-Jones-Developer/password_generator/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: www.linkedin.com/in/matt-jones-zx81
-[product-screenshot]: assets/images/app_screenshot.png
-[console-output-screenshot]: assets/images/console_output_screenshot.png
-[wireframe-screenshot]: assets/images/wireframing_screenshot.png
+[product-screenshot]: assets/images/screenshots/app-screenshot.png
+[console-output-screenshot]: assets/images/screenshots/console_output_screenshot.png
+[wireframe-screenshot]: ./assets/images/screenshots/wireframing_screenshot.png
+[tablet-screenshot1]: ./assets/images/screenshots/pw_gen_ipad-screenshot.png
+[mobile-screenshot1]: ./assets/images/screenshots/pw_gen_mobile-screenshot1.png
+[mobile-screenshot2]: ./assets/images/screenshots/pw_gen_mobile-screenshot2.png
 [javascript-url]: https://www.javascript.com
 [html5-url]: https://html5.org/
 [css-url]: https://www.w3.org/Style/CSS/Overview.en.html
+[js-logo]: assets/images/icons/js.svg
+[html5-logo]: assets/images/icons/html5.svg
+[css-logo]: assets/images/icons/css3.svg

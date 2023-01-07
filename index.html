@@ -8,7 +8,7 @@
     <link rel="icon" href="./assets/img/keyng-icon_sml.png" type="image/icon type">
     <link href='https://fonts.googleapis.com/css?family=Nunito:300,400,600,800,900' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,600,800,900' rel='stylesheet'>
-    <title>Pro Password Generator</title>
+    <title>Ultimate Password Generator</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -18,16 +18,17 @@
         <div class="container">
             <div class="nav-left">
                 <img src="./assets/images/icons/icn_rocket_wht.svg" alt="rocket-icn">
-                <a href="https://github.com/Matt-Jones-Developer">glitchy corp &copy;</a>
+                <a href="https://github.com/Matt-Jones-Developer">glitchy corp <small>&copy;</small></a>
             </div>
             <div class="nav-items">
                 <ul>
-                    <li><a href="index.html">home</a></li>
+                    <!-- <li><a href="index.html">home</a></li> -->
                     <!-- todo - add an about/how to section - may be pointless though! -->
                     <!-- <li><a href="index.html">about</a></li>
                     <li><a href="index.html">generate</a></li> -->
-                    <li><a href="index.html">log-in</a>
-                        <button id="login"><img src="./assets/images/icons/icn_login_wht.svg" alt="login-icn"></button>
+                    <li>
+                        <button id="btn-user">log-in</button>
+                        <img src="./assets/images/icons/icn_login_wht.svg" alt="login-icn">
                     </li>
 
                 </ul>
@@ -38,9 +39,9 @@
     <div class="wrapper">
         <!-- project header -->
         <header class="header">
-            <div class="container">
+            <div class="header-welcome">
                 <h1>Ultimate Password Generator</h1>
-                <h3>Welcome, Username!</h3>
+                <h3 id="user">Welcome, Username!</h3>
             </div>
         </header>
         <!-- section: generator box -->
@@ -102,12 +103,8 @@
             </div>
         </footer>
     </div>
-    <!-- <script src="./assets/scripts/main.js"></script>    -->
-    <!-- <script src="./assets/scripts/if_else.js"></script> -->
-    <!-- <script src="./assets/scripts/array.js"></script> -->
-    <!-- <script src="./assets/scripts/do_while_alternative.js"></script> -->
-    <!-- <script src="./assets/scripts/function_no_recall.js"></script> -->
-    <script src="./assets/scripts/tests.js"></script>
+    <script src="./assets/scripts/main.js"></script>   
+    <!-- <script src="./assets/scripts/tests.js"></script> -->
 </body>
 
 </html>
