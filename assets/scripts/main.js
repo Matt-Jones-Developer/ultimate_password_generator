@@ -107,12 +107,15 @@ let pwLength = 0;
 // new array to store user options 
 let optionsArray = [];
 
-// additional tracker array to store types - for fun!
+// additional tracker array to store types - for fun! - SCOPE?? Why Global??
 let typesSelected = [];
+
+// global random password array - does this NEED to be global also??
+let randomPassword = [];
 
 // Buttons
 
-// add user login name btn
+// user login btn
 let loginBtn = document.querySelector('#btn-user');
 // button to heading selector
 let welcomeHeading = document.querySelector('div.header-welcome #user');
@@ -120,15 +123,28 @@ let welcomeHeading = document.querySelector('div.header-welcome #user');
 // get started button feature 
 let getStartedBtn = document.querySelector('#btn-start');
 
+// the generatePassword btn
+
+// initialize BEFORE adding selector
 // genBtn: references the #generate element
 let genBtn = document.querySelector('#generate');
 
-// start program
+// Add event listener to generate button
+genBtn.addEventListener('click', writePassword);
+
+
+// start program 
 startApp()
 
 // user login
 // on-click -> login handler 
 loginBtn.onclick = () => {
+    setUserName();
+}
+
+// function to re-call setUserName
+function recallUserName() {
+    // re-run setUserName()
     setUserName();
 }
 
@@ -149,7 +165,7 @@ function startApp() {
 // set up a username
 function setUserName() {
     // constant myName which prompts on btn press
-    const myName = prompt('Please enter your username.');
+    const myName = prompt('Please enter a username.');
 
     // if myName === true;
     if (myName) {
@@ -157,6 +173,8 @@ function setUserName() {
         localStorage.setItem('name', myName);
         // update the welcome element
         welcomeHeading.innerHTML = 'Welcome,  ' + myName + '!';
+        // user instruction (dummy proof)
+        alert(`Great ${myName}!\nNow you can hit the Get Started button below.`)
 
     } else {
         // re-call function
@@ -164,25 +182,40 @@ function setUserName() {
     }
 }
 
-// function to re-call setUserName
-function recallUserName() {
-    // re-run setUserName()
-    setUserName();
-}
+// USER PROMPTS START:
 
-// A get started button that allows user a choice when to start 
-// on-click 'get started' handler 
+// A get started button that allows user a choice when to start receiving prompts
+// on-click 'get started'-> event handler 
 getStartedBtn.onclick = () => {
     getPasswordLength();
+    // debug - to test theory that num is a string which is breaking the logic
+    // BUG FOUND! Now just got to fix parseInt(num) issue 
+    // getPasswordOptions()
 }
 
 // setting a password length 
+
+// ********************** MAJOR BUG ISSUE ************************ 
+
+// If I change pwLength to a number globally (say 10) the issue is solved
+// When trying to return num here (either via parseInt() or Number input - both fail)
+
+// Issue 1: 'prompt' will be a string - not a number
+// SOLVE: make it a number!! Number(prompt("..."))
+// this STILL won't fix the issue!
+
+// Issue 2: cannot call getPasswordOptions() AFTER return parseInt(num)
+// SOLVE: added a try, catch, finally -> makes no difference ?
+
+// ***************************************************************
+
+
 function getPasswordLength() {
-    // while
+    // while true
     let num = 0
-    // 'do' first
+    // 'do' until false 
     do {
-        num = prompt('Please enter a password length (10-64):')
+        num = Number(prompt('Please enter a password length (10-64):'))
         if (num < 10) {
             alert("Password must be more than 10 characters!")
         } else if (num > 64) {
@@ -193,52 +226,96 @@ function getPasswordLength() {
     } while (num < 10 || num > 64 || !Number.isInteger(+num));
 
     // debug
-    console.log(`num typeOf: ${typeof (num)}`)
+    console.log(`num typeOf: ${typeof (num)}`) // number
     console.log(`chosen length: ${num}`)
     // update the user 
     alert(`Great! Your password length will be ${num}.`)
 
-    // call getPasswordOptions
+    // // olde way
     getPasswordOptions()
-    //return as an integer 
-    return parseInt(num);
+    // this will log number 
+    console.log(`num typeOf: ${typeof (num)}`)
+    // return parseInt(num);
+    return num;
+    // return;
 
+    // try to fix issue with try, catch and finally?? No.
+    // try {
+    //     // return num as an integer
+    //     return parseInt(num);
+
+    // } finally {
+    //     // update log with next move
+    //     console.log('getPasswordOptions calling now...')
+    //     // debug - still a string?  Why?
+    //     // this is the ONLY place that this log will log too
+    //     console.log(`num typeOf: ${typeof (num)}`)
+    //     // call function after return
+    //     getPasswordOptions()
+    // }
+    // try {
+    //     // update log with next move
+    //     console.log('getPasswordOptions calling now...')
+    //     // debug - still a string?  Why?
+    //     // this is the ONLY place that this log will log too
+    //     console.log(`num typeOf: ${typeof (num)}`)
+    //     // call function after return
+    //     getPasswordOptions()
+
+
+    // } finally {
+    //     // return num as an integer
+    //     return parseInt(num);
+    // }
 }
 
-// create another function for the boolean options 
-// (unless I can merge?) [TODO]
+// function to confirm the boolean options 
 function getPasswordOptions() {
 
-    // conditional to control booleans selected 
+    // USER PROMPTS
     let lower = confirm('Do you want lowercase characters?')
     let upper = confirm("Do you want uppercase characters?")
     let special = confirm("Do you want special characters?")
     let numeric = confirm("Do you want numeric characters?")
 
+    // conditional to control booleans selected 
     if (lower) {
         // add lowercase chars to the new array 
         optionsArray = optionsArray.concat(lowerCasedCharacters);
+        // debug
         console.log('current option1', optionsArray)
         // add type to types array
         typesSelected.push('lower');
+        // debug
         console.log(typesSelected)
+        // debug: check array size 
+        console.log(optionsArray.length)
     } if (upper) {
         // add uppercase chars to new array 
         optionsArray = optionsArray.concat(upperCasedCharacters);
+        // debug
         console.log('current option2', optionsArray)
         // add type to types array
         typesSelected.push('upper');
+        // debug
         console.log(typesSelected)
+        // debug: check array size 
+        console.log(optionsArray.length)
     } if (special) {
         // add special chars to new array
         optionsArray = optionsArray.concat(specialCharacters);
+        // debug
         console.log('current option3', optionsArray)
         // add type to types array
         typesSelected.push('special');
+        // debug
         console.log(typesSelected)
+        // debug: check array size 
+        console.log(optionsArray.length)
     } if (numeric) {
         // add numerical chars to new array
         optionsArray = optionsArray.concat(numericCharacters);
+        // debug
         console.log('current option4', optionsArray)
         // add type to types array
         typesSelected.push('numeric');
@@ -248,18 +325,16 @@ function getPasswordOptions() {
         console.log(optionsArray.length)
 
     } else {
-        // invoked IF NO TYPES == TRUE (0)
-        // debug 
-        console.log('empty array - no types selected', optionsArray)
+        // invoked if NO TYPES == TRUE (0)
         // restart
         recallOptions()
     }
 
-    // call optionsOK
+    // if OK, call optionsOK
     optionsOK()
 }
 
-// create a function to re-call the last: 
+// function to re-call getPasswordOptions: 
 
 function recallOptions() {
     // IF no types are selected 
@@ -269,96 +344,72 @@ function recallOptions() {
         console.log(`getPasswordOptions function re-called: ${optionsArray}`)
         // alert user at the appropriate point
         alert("You must choose at least 1 type of character.")
-        // re-call options function if array empty
+        // re-call options function -if array empty
         getPasswordOptions()
     }
 }
 
-// new 'options OK' function -force user feedback once selected types OK
+// 'options OK' function -force user feedback once selected types OK
 function optionsOK() {
     // update the user with choices
     alert(`Awesome! You have selected ${optionsArray.length} possible characters.\nYou selected types: ${typesSelected}.`)
     // update user with chosen types (for fun, why not!)
     alert('You can now hit the GENERATE button below.  Good work!')
-    // testing getRandom
-    getRandom()
+    // // debug: testing getRandom
+    // getRandom()
 
 }
 
-let stringChar = '';
-
-// get a random element from chosenOptions array
-function getRandom() {
-    // pick a character from optionsArray
-    let singleChar = Math.floor(Math.random() * optionsArray.length);
-    // debug: it prints a single character each time
-    console.log('random char was picked:', optionsArray[singleChar]);
-    stringChar = optionsArray[singleChar];
-    // debug; yes, it's the same char as this function picks
-    console.log(stringChar)
-}
-
-// generatePassword()
-
-// Function to generate password with user input
+// generate a random password (random + generate code merge) 
 function generatePassword() {
-    // debug - calls
-    // console.log('accessed generatePassword OK')
-    // create the empty STRING to hold the password
-    let passwordArray = "";
-    // iterate pwLength times 
+
+    // // store the randomArray LOCALLY
+    // let randomPassword = [];
+
+    // iterate through i, 10 times
     for (let i = 0; i < pwLength; i++) {
-        // can we even call a function within an expression?
-        // call it to get each random digit 
-        // getRandom()
-        // why are we using random here?? We have already randomised
-        // passwordArray.push(Math.floor(Math.random() * getRandom()));
-        // what do we want to do??
-        // add the generated random to pwArray, each pass
-        // passwordArray.push(stringChar)
-        passwordArray += "Hello!";
+        // TODO: swap 'r' for more useful naming convention
+        // generate a SINGLE random digit 10 times: stored to r
+        let r = Math.floor(Math.random() * optionsArray.length);
+        // add a value to randomPassword each pass 
+        randomPassword += optionsArray[r];
+        // debug
+        // print the single random char 10 times 
+        console.log('new random logged:', optionsArray[r]);
+        // console the array only 
+        // contains 10 string chars - OK
+        console.log('current array:', randomPassword)
+
     }
-    // once finished, show the generated password string 
-    // console.log(passwordArray)
-    // an essential return 
-    return passwordArray;
+    // debug: update result to console 
+    console.log('randomPassword array:', randomPassword);
+    // check type: (string of chars)
+    console.log(`randomPassword type: ${typeof (randomPassword)}`)
+    // get string length (ok)
+    // console.log('randomPassword length:', randomPassword.length)
+
+    // must return here else the array is empty
+    return randomPassword;
+
 }
-
-// let practicePassword = "";
-// for (let i = 0; i < 100; i++) {
-
-//     practicePassword += "j"
-
-// }
-
-
-// return practicePassword;
-
-
-// // Get references to the #generate element
-// let genBtn = document.querySelector('#generate');
-
-// their logic is actually:
-// -> hit the genBtn -> invoke writePassword -> which assigns var 'password' = generatePW
-// the passwordText var then adds the pw to the textfield 
 
 // Write password to the #password input
 function writePassword() {
-    // this var ASSIGNS AND CALLS genPW here 
+    // ASSIGNS AND CALLS genPW here 
     let password = generatePassword();
     // var text sent to textfield (#password element)
     let passwordText = document.querySelector('#password');
     // assign that value to var password 
     passwordText.value = password;
+    // debugs
+    console.log('password string', password);
+    // check type: (string)
+    console.log(`password type: ${typeof (password)}`)
+    // get string length
+    // this claims its UNDEFINED IF return is used
+    // console.log('password length:', password.length)
 
-    // // testing getRandom
-    // getRandom()
+    // return password;
+
 }
-
-// Add event listener to generate button
-genBtn.addEventListener('click', writePassword);
-
-
-
-
 

@@ -417,3 +417,144 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
+
+
+// I feel that this function isn't required and the generatePassword function 
+// will cater for both getRandom and generatePassword as a string 
+
+// let stringChar = '';
+
+// // get a random element from chosenOptions array
+// function getRandom() {
+//     // pick a character from optionsArray
+//     let singleChar = Math.floor(Math.random() * optionsArray.length);
+//     // debug: it prints a single character each time
+//     console.log('random char was picked:', optionsArray[singleChar]);
+//     stringChar = optionsArray[singleChar];
+//     // debug; yes, it's the same char as this function picks
+//     console.log(stringChar)
+// }
+
+// generatePassword()
+
+// Function to generate password with user input
+// function generatePassword() {
+//     // debug - calls
+//     // console.log('accessed generatePassword OK')
+//     // create the empty STRING to hold the password
+//     let passwordArray = "";
+//     // iterate pwLength times 
+//     for (let i = 0; i < pwLength; i++) {
+//         // can we even call a function within an expression?
+//         // call it to get each random digit 
+//         // getRandom()
+//         // why are we using random here?? We have already randomised
+//         // passwordArray.push(Math.floor(Math.random() * getRandom()));
+//         // what do we want to do??
+//         // add the generated random to pwArray, each pass
+//         // passwordArray.push(stringChar)
+//         passwordArray += "Hello!";
+//     }
+//     // once finished, show the generated password string 
+//     // console.log(passwordArray)
+//     // an essential return 
+//     return passwordArray;
+// }
+
+// let practicePassword = "";
+// for (let i = 0; i < 100; i++) {
+
+//     practicePassword += "j"
+
+// }
+
+
+// return practicePassword;
+
+
+// my ultimate getRandom + generatePassword string function!
+
+function generatePassword() {
+
+  // iterate through i, 10 times
+  for (let i = 0; i < pwLength; i++) {
+      // generate a SINGLE random digit 10 times: stored to r
+      let r = Math.floor(Math.random() * chosenChars.length);
+      // add a value to randomPW each pass 
+      randomPW += chosenChars[r];
+      // debug
+      // print the single random char 10 times 
+      console.log('new randomchar logged:', chosenChars[r]);
+
+  }
+  // debug: update result to console 
+  // contains a string of 10 random digits
+  console.log('randomPW array:', randomPW);
+  // check type: (string)
+  console.log(`ranPW typeOf: ${typeof (randomPW)}`)
+
+}
+
+
+// // Get references to the #generate element - included ABOVE 
+// let genBtn = document.querySelector('#generate');
+
+// their logic is actually:
+// -> hit the genBtn -> invoke writePassword -> which assigns var 'password' = generatePW
+// AND calls generatePassword function
+// the passwordText var then adds the pw to the textfield 
+
+// Write password to the #password input
+function writePassword() {
+  // this var ASSIGNS AND CALLS genPW here 
+  let password = generatePassword();
+  // var text sent to textfield (#password element)
+  let passwordText = document.querySelector('#password');
+  // assign that value to var password 
+  passwordText.value = password;
+
+}
+
+// my ultimate getRandom + generatePassword + printPassword as string function!
+
+function generatePassword() {
+
+  // iterate through i, 10 times
+  for (let i = 0; i < pwLength; i++) {
+      // generate a SINGLE random digit 10 times: stored to r
+      let r = Math.floor(Math.random() * optionsArray.length);
+      // add a value to randomPW each pass 
+      randomPassword += optionsArray[r];
+      // debug
+      // log the array only 
+      console.log(randomPassword)
+
+  }
+  // debug: update result to console 
+  // contains a string of 10 random digits
+  console.log('randomPassword array:', randomPassword); // empty?
+  // check type: (string)
+  console.log(`randomPassword datatype: ${typeof (randomPassword)}`) // object ??
+  // get string length
+  console.log('length of randomPassword:', randomPassword.length) // 0 :(
+
+  // return it
+  // return randomPassword; // do we need to return here?
+
+}
+
+
+function writePassword() {
+  // this var ASSIGNS AND CALLS genPW here 
+  let password = generatePassword();
+  // var text sent to textfield (#password element)
+  let passwordText = document.querySelector('#password');
+  // assign that value to var password 
+  passwordText.value = password;
+
+  // return it
+  return password;
+
+}
+
+
