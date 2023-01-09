@@ -94,9 +94,9 @@ I wanted to offer a user log-in feature that allows a user to 'dummy log-in' to 
 
 I asked my family to test this app, an older member said they didn't really 'get how to use it' so I wanted to make the app user proof and walk them through everything with plenty of feedback.  May be a bit overkill, but I feel it was part of my UX work to add better features.
 
-Although the 'get started' button IS an extra step, I think it makes it more enjoyable to and easier to use.  I like that if you make a mistake you can simply repeat the get started before any passwords are generated. 
+Although the 'Choose Options' button IS an extra step, I think it makes it more enjoyable to and easier to use.  I like that if you make a mistake you can simply repeat the options before any passwords are generated. 
 
-I still have the prompts and alerts (as per the criteria) so I hope this will not affect my grade.  It was a UX design choice that I chose to make.  If I get marked down for this, I will re-submit without it.
+I still have the prompts and alerts (as per the criteria) so I hope this will not affect my grade.  It was a UX design choice that I chose to make.  If I get marked down for this, I will re-submit without the additional button.
 
 Adding this button created a new set of bugs and problems, but I got through it and fixed them.  Sometimes (most times?) simple is better!
 
@@ -170,12 +170,12 @@ This very simple console and GUI application can be accessed through your web br
 When you first load the page, it will offer a tip to click the log-in button to add a username.
 Once your name is stored to the cache, it will remember it.  To change it again, just press 'log-in' button again.
 
-To create a new password, hit the 'get started' button.
+To create a set of password options, hit the 'Choose Options' button.
 You will be presented with a series of prompts (as per the brief criteria) that refine your password length, what types of characters you want to include and some helpful user feedback alerts.
 
 Once complete, you hit the GENERATE button - the password generated will be printed to the textfield, ready for you to copy and paste using the copy to clipboard button.
 
-As another UX feature, I wanted the user to be able to quick copy the password, using the '+' icon - I am really happy with the UX flow on this and feel that whilst alerts and prompts wouldn't be my first choice, they work quite well and it's fun to use. 
+As another UX feature, I wanted the user to be able to quick copy the password, using the '+' icon - I am happy with the UX flow on this and feel that whilst alerts and prompts wouldn't be my first choice, they work quite well and it's fun to use. I feel undecided about the addition of the 'choose options' button and may remove it.
 
 Please open main.js within the scripts folder to view my JS code. 
 You can also see my working.js for all the tinkering and coding revisions I made to reach my solutions.
@@ -189,7 +189,7 @@ N/A
 
 ### Installation
 
-No installation required.  Just load your browser.  If you want to change your username, just hit 'log-in'.
+No installation required.  Just load your browser.  If you want to change your username, just hit 'log-in'.  If you don't want to set a username, you don't have to.
 
 If you clear your browsers cache, it will offer the first 'welcome alert' that will advise you to start out by hitting the 'log-in' button.
 
