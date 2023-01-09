@@ -94,7 +94,7 @@ I wanted to offer a user log-in feature that allows a user to 'dummy log-in' to 
 
 I asked my family to test this app, an older member said they didn't really 'get how to use it' so I wanted to make the app user proof and walk them through everything with plenty of feedback.  May be a bit overkill, but I feel it was part of my UX work to add better features.
 
-Although the 'Choose Options' button IS an extra step, I think it makes it more enjoyable to and easier to use.  I like that if you make a mistake you can simply repeat the options before any passwords are generated. 
+Although the 'Choose Options' button IS an extra step, I think it makes it more enjoyable to use.  I like that if you make a mistake you can simply repeat the options before any passwords are generated. 
 
 I still have the prompts and alerts (as per the criteria) so I hope this will not affect my grade.  It was a UX design choice that I chose to make.  If I get marked down for this, I will re-submit without the additional button.
 
