@@ -523,7 +523,7 @@ textarea {
 }
 
 @media (max-width: 500px) {
-  .btn-gen {
+  .btn-options {
     font-size: 0.8rem;
   }
 }
@@ -604,6 +604,10 @@ textarea {
 
   .get-started {
     margin-bottom: 2rem;
+  }
+
+  .btn-options {
+    font-size: 0.7rem;
   }
 
   .nav-left a {
