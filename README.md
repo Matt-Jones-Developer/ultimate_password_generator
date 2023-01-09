@@ -106,6 +106,8 @@ The main criteria involved using vanilla JavaScript only, so I started off by ps
 
 I have included my 'working.js' file to show you the amount of work I put into to figuring out the solutions for myself, rather than relying on others or google.  I did contact AskBCS a once about for some minor bug (a tiny error on my part) but feel that I deserved to have some assistance in ironing that out.
 
+I realise that having the vars as global is bad practice but I felt it worked and a lot of other functions access them, so I will switch out for local and refactor/improve upon this logic in the future.
+
 Another huge lesson learnt: I had the full working solution within the random.js file - I copied it to main.js but forgot to change a variable name to match the main.js - instead of finding this, I quickly started messing with the working file!  I usually make a point to comment it out and make a copy before editing, but didn't.  I then tried to undo but couldn't get it back to a working state. It took my several more attempts before getting it working again.
 
 Yes, the working.js file is messy, unreadable in places, but it got my program to where it is now.  I finally ironed out a lot of these bugs and even refactored older code into better ideas as they cropped up.

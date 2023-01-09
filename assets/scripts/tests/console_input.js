@@ -1,5 +1,7 @@
 // build a password generator app
 
+// trying to use readline to build the app entirely within the console, before using the browser
+
 // user chooses a password length
 
 // let num = prompt("Please choose a password length (10-64):")

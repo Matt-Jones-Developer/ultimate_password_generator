@@ -140,6 +140,22 @@ when in fact it was a simple case of moving the alert OUTSIDE of the else that c
      11: special + numeric - OK (the third and the last - OK?)
      12: NONE selected - OK fixed and loops correctly (no while needed)
 
+// bug with UPPER + SPECIAL ?? fixed - it was a browser not refreshed issue 
+
+     1: all selected - OK
+     2: lower selected - OK
+     3: upper selected - OK
+     4: special selected - OK
+     5: numeric selected - OK 
+     6: lower + upper - OK
+     7: lower + special - OK
+     8: lower + numeric - OK
+**** 9: upper + special - "you have selected chars and types" TWICE bug - then OK
+     10: upper + numeric - OK
+     11: special + numeric - OK
+     12: NONE selected - OK 
+
+{DONE}
 
 
 2. function for getting random element from array 
@@ -157,6 +173,16 @@ when in fact it was a simple case of moving the alert OUTSIDE of the else that c
      // call the getRandom function [DONE]
      // add each loop of optionsArray(randomGen) to randomPassword [DONE]
      // return the password [DONE] - important it broke my code for ages!
+
+
+     // FEATURE:  IF user presses 'generate' before setting optionsArray - alert 
+     // Another reason to question the 'Get Started' button - perhaps remove this in a future update 
+
+     // if generatePassword (genBtn pressed):
+          // if optionsArray === []; {
+               // alert
+          }
+          
 
 
 

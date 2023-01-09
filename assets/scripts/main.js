@@ -101,18 +101,17 @@ let upperCasedCharacters = [
     'Z'
 ];
 
-// variable to store password length - global required?? NO
+// store password length globally
 let pwLength = 0;
 
-console.log(`pwlength typeOf: ${typeof (pwLength)}`) // number
 // new array to store user options 
 let optionsArray = [];
-console.log(`options typeOf: ${typeof (optionsArray)}`) // number
-// additional tracker array to store types - for fun! - SCOPE?? Why Global??
+
+// provide user with options they selected
 let typesSelected = [];
-console.log(`types typeOf: ${typeof (typesSelected)}`) // number
-// // global random password array - does this NEED to be global also??
-// let randomPassword = [];
+
+// options accessed switch
+let optionsAccessed = 0;
 
 // Buttons
 
@@ -125,8 +124,6 @@ let welcomeHeading = document.querySelector('div.header-welcome #user');
 let getStartedBtn = document.querySelector('#btn-start');
 
 // the generatePassword btn
-
-// initialize BEFORE adding selector
 // genBtn: references the #generate element
 let genBtn = document.querySelector('#generate');
 
@@ -174,8 +171,10 @@ function setUserName() {
         localStorage.setItem('name', myName);
         // update the welcome element
         welcomeHeading.innerHTML = 'Welcome,  ' + myName + '!';
-        // user instruction (dummy proof)
-        alert(`Great ${myName}!\nNow you can hit the Get Started button below.`)
+        // debug
+        console.log('user set a username')
+        // provide feedback (user proof)
+        alert(`Great ${myName}!\nNow you can hit the 'Get Started' button below.`)
 
     } else {
         // a catch for if the user just wants to cancel; not re-assign username
@@ -196,22 +195,18 @@ function setUserName() {
 
 // USER PROMPTS START:
 
-// A get started button that allows user a choice when to start receiving prompts
-// on-click 'get started'-> event handler 
+// allow user a choice when to start receiving prompts (user UX helper)
 getStartedBtn.onclick = () => {
     getPasswordLength();
-    // debug - to test theory that num is a string which is breaking the logic
-    // BUG FOUND! Now just got to fix parseInt(num) issue + assign num to pwLength
-    // getPasswordOptions();
 }
 
 // setting a password length 
 function getPasswordLength() {
-    // while true
-    let num = 0
-    // 'do'
+    // while
+    let num = 0;
+    // 'do' this
     do {
-        num = parseInt(prompt('Please enter a password length (10-64):'))
+        num = Number(prompt('Please enter a password length (10-64):'))
         if (num < 10) {
             alert("Password must be more than 10 characters!")
         } else if (num > 64) {
@@ -223,47 +218,48 @@ function getPasswordLength() {
 
     // debug
     console.log(`num typeOf: ${typeof (num)}`) // number
-    console.log(`chosen length: ${num}`)
+    console.log(`chosen length: ${num}`) // chosen length
     // update the user 
     alert(`Great! Your password length will be ${num}.`)
 
-    // // // olde way
-    // getPasswordOptions()
-    // // this will log number 
-    // console.log(`num typeOf: ${typeof (num)}`)
-    // // return parseInt(num);
-    // return num;
-    // return;
+    // try, catch, finally to call another function after return 
+    try {
+        // assign num to pwLength
+        pwLength = num;
+        // return pwLength;
+        return pwLength;
 
-    // try to fix issue with try, catch and finally?? No.
-        try {
-            // assign num to pwLength
-            pwLength = num;
-            // return parseInt(num);
-            return pwLength;
-
-        } finally {
-            // update log with next move
-            console.log('getPasswordOptions calling now...')
-            // debug - still a string?  Why?
-            // this is the ONLY place that this log will log too
-            console.log(`pwLength typeOf: ${typeof (pwLength)}`)
-            // call function after return
-            getPasswordOptions()
-        }
+    } finally {
+        // update log with next move
+        console.log('getPasswordOptions calling now...')
+        // check pwLength is a Number
+        console.log(`pwLength typeOf: ${typeof (pwLength)}`)
+        // call function after return
+        getPasswordOptions()
+    }
 }
 
-// function to confirm the boolean options 
+// function to confirm boolean options 
 function getPasswordOptions() {
 
-    // USER PROMPTS
+    // debug
+    console.log('options prompts invoked')
+
+    // options switch ON
+    optionsAccessed = 1;
+    // debug
+    console.log('optionsAccessed switch:', optionsAccessed)
+    // if user restarts - reset the arrays to empty
+    optionsArray = [];
+    typesSelected = [];
+
+    // user prompts
     let lower = confirm('Do you want lowercase characters?')
     let upper = confirm("Do you want uppercase characters?")
     let special = confirm("Do you want special characters?")
     let numeric = confirm("Do you want numeric characters?")
 
     // conditional to control booleans selected 
-    // would a switch statement be better here?
     if (lower) {
         // add lowercase chars to the new array 
         optionsArray = optionsArray.concat(lowerCasedCharacters);
@@ -311,11 +307,14 @@ function getPasswordOptions() {
 
     } else {
         // invoked if NO TYPES == TRUE (0)
-        // re-call
         recallOptions()
     }
-
-    // if OK, call optionsOK
+    // debug switch
+    // // reset options switch
+    // optionsAccessed = 0;
+    // debug
+    console.log('options chosen OK')
+    // if options OK, call optionsOK
     optionsOK()
 }
 
@@ -334,44 +333,55 @@ function recallOptions() {
     }
 }
 
-// 'options OK' function -force user feedback once selected types OK
+// 'options OK'- user feedback once selected types OK
 function optionsOK() {
+    // debug
+    console.log('optionsOK func invoked, alerting user')
+    // ready to generate log
+    console.log('ready to generate')
     // update the user with choices
     alert(`Awesome! You have selected ${optionsArray.length} possible characters.\nYou selected types: ${typesSelected}.`)
     // update user with chosen types (for fun, why not!)
     alert('You can now hit the GENERATE button below, or start over.')
-    // // debug: testing getRandom
-    // getRandom()
 
 }
 
 // generate a random password (random + generate code merge) 
 function generatePassword() {
 
-    // store the randomArray LOCALLY
+    // catch user pressing generate first 
+    //if generatePassword (genBtn pressed):
+    if (optionsAccessed === 1) {
+        // change the copied text to 'copy to clipboard' should user press generate again
+        copy_notice.innerHTML = 'Copy to clipboard';
+
+    } else {
+        // alert
+        // ONLY called if optionsAccessed === 1
+        alert("Hey! you haven't chosen any options yet!\nHit the 'Get Started' button first.")
+    }
+
+    // store randomArray LOCALLY
     let randomPassword = [];
 
-    // iterate through i, 10 times
+    // iterate through i, pwLength times
     for (let i = 0; i < pwLength; i++) {
-        // TODO: swap 'r' for more useful naming convention
-        // generate a SINGLE random digit 10 times: stored to r
+        // generate a random char 10 times: stored to r
         let r = Math.floor(Math.random() * optionsArray.length);
         // add a value to randomPassword each pass 
         randomPassword += optionsArray[r];
         // debug
         // print the single random char 10 times 
-        console.log('new random logged:', optionsArray[r]);
-        // console the array only 
-        // contains 10 string chars - OK
-        console.log('current array:', randomPassword)
-
+        // console.log('new random logged:', optionsArray[r]);
+        // // console the array only 
+        // console.log('current array:', randomPassword)
     }
     // debug: update result to console 
-    console.log('randomPassword array:', randomPassword);
+    console.log('randomPassword array generated:', randomPassword);
     // check type: (string of chars)
     console.log(`randomPassword type: ${typeof (randomPassword)}`)
     // get string length (ok)
-    // console.log('randomPassword length:', randomPassword.length)
+    console.log('randomPassword length:', randomPassword.length)
 
     // must return here else the array is empty
     return randomPassword;
@@ -392,13 +402,14 @@ function writePassword() {
     console.log(`password type: ${typeof (password)}`)
     // get string length
     console.log('password length:', password.length)
+    console.log('successfully generated a password')
 
 }
 
 // copy to clipboard button feature 
 
 function copyText() {
-      
+
     /* Select text area by id*/
     let copyText = document.getElementById("password");
 
@@ -406,9 +417,9 @@ function copyText() {
     copyText.select();
     copyText.setSelectionRange(0, 99999);
 
-     // Copy the text inside the text field
+    // Copy the text inside the text field
     navigator.clipboard.writeText(copyText.value);
-  
+
     // user feedback - element change to 'password copied!'
     copy_notice.innerHTML = 'Password copied!';
 }

@@ -49,15 +49,15 @@ function genPW() {
     return password;
 }
 
-// // write password function 
-// function writePassword() {
-//     let password = genPW()
-//     let passwordText = document.querySelector('#password');
+// write password function 
+function writePassword() {
+    let password = genPW()
+    let passwordText = document.querySelector('#password');
 
-//     passwordText.value = password;
+    passwordText.value = password;
     
-// }
+}
 
-// // btn handler
-// let genBtn = document.querySelector('#generate');
-// genBtn.addEventListener('click', writePassword)
+// btn handler
+let genBtn = document.querySelector('#generate');
+genBtn.addEventListener('click', writePassword)

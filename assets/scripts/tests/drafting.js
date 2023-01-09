@@ -174,27 +174,59 @@ getOtherOptions()
 function getOtherOptions() {
 
     let optionsArray = [];
+    let typesSelected = [];
     // request boolean prompts
     let special = confirm("Do you want special characters?")
     let lower = confirm("Do you want lowercase?")
     let upper = confirm("Do you want uppercase?")
     let numeric = confirm("Do you want numeric characters?")
 
-    if (special) {
-        optionsArray = optionsArray.concat(specialCharacters);
-        console.log('current options', optionsArray)
-    }
-    else if (lower) {
-        optionsArray = optionsArray.concat(lowerCasedCharacters);
-        console.log('current options+', optionsArray)
-    }
-    else if (upper) {
-        optionsArray = optionsArray.concat(upperCasedCharacters);
-        console.log('current options+', optionsArray)
-    }
-    else if (numeric) {
-        optionsArray = optionsArray.concat(numericCharacters);
-        console.log('current options+', optionsArray)
+    // conditional to control booleans selected 
+    // would a switch statement be better here?
+    if (lower) {
+      // add lowercase chars to the new array 
+      optionsArray = optionsArray.concat(lowerCasedCharacters);
+      // debug
+      console.log('option1:lower', optionsArray)
+      // add type to types array
+      typesSelected.push('lower');
+      // debug
+      console.log(typesSelected)
+      // debug: check array size 
+      console.log(optionsArray.length)
+  } if (upper) {
+      // add uppercase chars to new array 
+      optionsArray = optionsArray.concat(upperCasedCharacters);
+      // debug
+      console.log('option2:upper', optionsArray)
+      // add type to types array
+      typesSelected.push('upper');
+      // debug
+      console.log(typesSelected)
+      // debug: check array size 
+      console.log(optionsArray.length)
+  } if (special) {
+      // add special chars to new array
+      optionsArray = optionsArray.concat(specialCharacters);
+      // debug
+      console.log('option3:special', optionsArray)
+      // add type to types array
+      typesSelected.push('special');
+      // debug
+      console.log(typesSelected)
+      // debug: check array size 
+      console.log(optionsArray.length)
+  } if (numeric) {
+      // add numerical chars to new array
+      optionsArray = optionsArray.concat(numericCharacters);
+      // debug
+      console.log('option4:nums', optionsArray)
+      // add type to types array
+      typesSelected.push('numeric');
+      // debug: types selected
+      console.log(typesSelected)
+      // debug: check array size 
+      console.log(optionsArray.length)
     }
     else {
         alert("You must have at least 1 type")
@@ -351,112 +383,6 @@ let practicePassword = "";
   bigArray = bigArray.concat(exampleArray)
 
 
-
-// Array of special characters to be included in password
-let specialCharacters = [
-    '@',
-    '%',
-    '+',
-    '=',
-    '\\',
-    '/',
-    '|',
-    '*',
-    '&',
-    '§',
-    '`',
-    "'",
-    '"',
-    '!',
-    '#',
-    '$',
-    '^',
-    '?',
-    ':',
-    ',',
-    ')',
-    '(',
-    '}',
-    '{',
-    ']',
-    '[',
-    '~',
-    '-',
-    '_',
-    '.'
-  ];
-  
-  // Array of numeric characters to be included in password
-  let numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  
-  // Array of lowercase characters to be included in password
-  let lowerCasedCharacters = [
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-    'g',
-    'h',
-    'i',
-    'j',
-    'k',
-    'l',
-    'm',
-    'n',
-    'o',
-    'p',
-    'q',
-    'r',
-    's',
-    't',
-    'u',
-    'v',
-    'w',
-    'x',
-    'y',
-    'z'
-  ];
-  
-  // Array of uppercase characters to be included in password
-  let upperCasedCharacters = [
-    'A',
-    'B',
-    'C',
-    'D',
-    'E',
-    'F',
-    'G',
-    'H',
-    'I',
-    'J',
-    'K',
-    'L',
-    'M',
-    'N',
-    'O',
-    'P',
-    'Q',
-    'R',
-    'S',
-    'T',
-    'U',
-    'V',
-    'W',
-    'X',
-    'Y',
-    'Z'
-  ];
-  
-  // add user login name btn
-  let loginBtn = document.querySelector('#btn-user');
-  // button to heading selector
-  let welcomeHeading = document.querySelector('div.header-welcome #user');
-  
-  // get started button feature 
-  let getStartedBtn = document.querySelector('#btn-start');
-  
   // function CALLS
   
   // set up a username
