@@ -509,7 +509,8 @@ textarea {
     margin-left: 2rem;
     margin-right: 2rem;
   }
-  .btn {
+
+  .btn-gen {
     margin: 16px 0px 0px 0px;
     margin-top: 1.7rem;
     padding: 10px 15px;
@@ -522,7 +523,7 @@ textarea {
 }
 
 @media (max-width: 500px) {
-  .btn {
+  .btn-gen {
     font-size: 0.8rem;
   }
 }
