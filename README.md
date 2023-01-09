@@ -200,13 +200,15 @@ If you clear your browsers cache, it will offer the first 'welcome alert' that w
 <!-- USAGE EXAMPLES -->
 ## Usage and Screenshots
 
-Screenshot of the programs output
-Fully responsive design:
+Screenshot of the programs output with
+fully responsive design:
 
 ![tablet-screenshot1]
 ![mobile-screenshot2]![mobile-screenshot1]
 
+Console log:
 
+![console-output-screenshot]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
