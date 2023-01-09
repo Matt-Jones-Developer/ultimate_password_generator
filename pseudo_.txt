@@ -152,16 +152,23 @@ when in fact it was a simple case of moving the alert OUTSIDE of the else that c
 
 3. function to generate a password with user input 
 
+     // define an empty array [DONE]
+     // iterate over pwLength [DONE]
+     // call the getRandom function [DONE]
+     // add each loop of optionsArray(randomGen) to randomPassword [DONE]
+     // return the password [DONE] - important it broke my code for ages!
+
 
 
 4. Get references to the #generate element 
 
-
+     // let genBtn = document.querySelector('#generate');
 
 
 5. print password to the #password input 
 
-
+     // looks like its done 
+     // if we change the password to any string - it will print it
 
 
 6. Add event listener to Generate Button 
@@ -169,3 +176,5 @@ when in fact it was a simple case of moving the alert OUTSIDE of the else that c
 - when clicked it will generate a password  
 - must be printed into the password textfield box
 - must be printed via an alert (optional)
+
+genBtn.addEventListener('click', writePassword);

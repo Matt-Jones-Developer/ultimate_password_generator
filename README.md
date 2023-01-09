@@ -88,17 +88,19 @@ TODO:
 ## Overview
  
 I was assigned the task of building a password generator web app.
-The starter code had a basic GUI design which I developed and improved upon by adding my own styling and images.  I wanted to make the app really 'pop' so I used modern colours, created a blurred filter background of a cryptographic code image, added a simple navbar, header and footer. 
+The starter code had a basic GUI design which I developed and improved upon by adding my own styling, icons and images.  I wanted to make the app really 'pop' so I used modern colours, created a blurred filter background of a cryptographic code image, added a simple navbar, header and footer. 
 
-I wanted to offer a simple log-in feature that allows a user to 'dummy log-in' to set a custom welcome message to the user.  It is something I learnt whilst studying JavaScript intro tutorials that were provided by the bootcamp, so thought it would be a great opportunity to add some flair points to the project. The final version of this app will have a working backend data base - enabling users to actually login, register and create usernames and passwords.  This is a future update, coming soon. 
+I wanted to offer a user log-in feature that allows a user to 'dummy log-in' to set a custom welcome message to the user.  It is something I learnt whilst studying JavaScript intro tutorials that were provided at the start of bootcamp, so thought it would be a great opportunity to add some flair points to the project. The final version of this app will have a working backend data base - enabling users to actually register, login and create usernames and passwords.  This is a future update, coming soon. 
 
-I hated how the alerts/prompts immediately locked out the page, so I felt the addition of a 'get started button' was a necessity.
+I asked my family to test this app, an older member said they didn't really 'get how to use it' so I wanted to make the app user proof and walk them through everything with plenty of feedback.  May be a bit overkill, but I feel it was part of my UX work to add better features.
 
-I still have the prompts and alerts (as per the criteria) so I hope this will not affect my grade.  It was a UX design choice that I had to make.
+Although the 'get started' button IS an extra step, I think it makes it more enjoyable to and easier to use.  I like that if you make a mistake you can simply repeat the get started before any passwords are generated. 
 
-Adding this button created a new set of bugs and problems, but I got through it and fixed them.
+I still have the prompts and alerts (as per the criteria) so I hope this will not affect my grade.  It was a UX design choice that I chose to make.  If I get marked down for this, I will re-submit without it.
 
-I am happy with how the app looks, its fully mobile and tablet responsive and I am very glad I took a break from the logic side of the task halfway through to actually customise the app and make it unique.  This was in accordance with my initial wireframing and UX design features and improvements that I designed before starting out this project.  I am extremely proud of this effort!
+Adding this button created a new set of bugs and problems, but I got through it and fixed them.  Sometimes (most times?) simple is better!
+
+I am happy with how the app looks, its fully mobile and tablet responsive and I am very glad I took a break from the logic side of the task halfway through to actually customise the app and make it unique.  This was in accordance with my initial wireframing and UX design features and improvements that I designed before starting out this project.  I am proud of this effort.
 
 The main criteria involved using vanilla JavaScript only, so I started off by pseudo-coding the entire logical steps for the program to work as intended.  I find my pseudo is slowly improving, however I usually miss steps that then lead to bugs, however I really enjoy getting stuck in to solving them, so I am sure I will improve as time goes on.
 
@@ -108,9 +110,9 @@ Another huge lesson learnt: I had the full working solution within the random.js
 
 Yes, the working.js file is messy, unreadable in places, but it got my program to where it is now.  I finally ironed out a lot of these bugs and even refactored older code into better ideas as they cropped up.
 
-I felt my addition of functions helped readability, debugging and will allow for easier maintenance in the future.   
+I felt my addition of functions helped readability, debugging and will allow for easier maintenance in the future.   I could also argue there's way too many lines of code for what was required, but I am still learning so I gave myself freedom to experiment. 
 
-I intend to be an excellent programmer one day and I am a firm believer that practice and hard work will get me there.  
+I intend to be an excellent programmer one day and I am a firm believer that practice and hard work will get me there. 
 
 There is always time for reminders using google once I am a better programmer, but I always want to be the brain coming up with the solutions to problems, it's more rewarding but it does take longer, and look forward to becoming as competent in programming as I am with website design and development.
 
@@ -161,15 +163,15 @@ Product screenshot:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This very simple console and GUI application can be accessed through your web browser, you can also see the JS working under the hood by entering the console!
+This very simple console and GUI application can be accessed through your web browser, you can also see the JS working under the hood by entering the console.
 
 When you first load the page, it will offer a tip to click the log-in button to add a username.
 Once your name is stored to the cache, it will remember it.  To change it again, just press 'log-in' button again.
 
 To create a new password, hit the 'get started' button.
-You will be presented with a series of prompts (as per the brief criteria!!) that refine you password length, what types you want to include and some helpful user feedback alerts to keep you on track!
+You will be presented with a series of prompts (as per the brief criteria) that refine your password length, what types of characters you want to include and some helpful user feedback alerts.
 
-Once complete, you hit the GENERATE button - the password generated will be printed to the textfield, ready for you to copy and paste.
+Once complete, you hit the GENERATE button - the password generated will be printed to the textfield, ready for you to copy and paste using the copy to clipboard button.
 
 As another UX feature, I wanted the user to be able to quick copy the password, using the '+' icon - I am really happy with the UX flow on this and feel that whilst alerts and prompts wouldn't be my first choice, they work quite well and it's fun to use. 
 
@@ -218,6 +220,7 @@ Fully responsive design:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+#
 
 <!-- UX/UI DESIGN -->
 ## UX/UI Design
@@ -228,11 +231,14 @@ Screenshot of the web apps UI design stage:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+#
 
 <!-- CONTRIBUTING -->
 ## Contributing
 
 N/A
+
+#
 
 <!-- LICENSE -->
 ## License
@@ -241,16 +247,19 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+#
 
 <!-- CONTACT -->
 ## Contact
 
 Your Name - [@twitter_handle](https://twitter.com/glitchy81_dev)
 
+#
+
+## Project links
+
 Project Repo Link: [https://github.com/Matt-Jones-Developer/password_generator](https://github.com/Matt-Jones-Developer/password_generator)
 
-## TODO! ...
 
 Deployed Project Link: [https://matt-jones-developer.github.io/password_generator](https://matt-jones-developer.github.io/password_generator)
 

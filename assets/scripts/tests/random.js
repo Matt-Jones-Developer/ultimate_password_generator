@@ -23,44 +23,7 @@ let randomChar2 = chosenChars[r];
 console.log('new randomchar2:', randomChar2);
 
 
-// loop it, add each to the randomPW array - DONE!
-// illogical and not thinking about what the code is doing at all :(
-// this doesn't need .length (its an int not an array)
-for (let i = 0; i < pwLength.length; i++) {
-    // this is just default garbage
-    const element = chosenChars[i];
-    // why create another array and map it while already in a loop??
-    let randomPW = chosenChars.map(function (element) {
-        // what?!
-        let r = Math.floor(Math.random() * element.length);
-        // returns the same array as before
-        // return length;
-        console.log(randomPW, r);
-        // return element + 10;
-    })
-}
-
-// // define the new array
-// const randomArray = []
-// // loop over pwLength times 
-// for (let i = 0; i < pwLength; i++) {
-//     // and apply the random to this array directly 
-//     //- using push to add each value to new array
-//     randomArray.push(Math.floor(Math.random()))
-//     // debug: successfully adding each loop - OK
-//     console.log('new char added:', randomArray)
-// }
-
-// // prints 10 0's
-// console.log(randomArray)
-
-// // well, at least we're printed 10 instead of 14 now!
-
-// // this is HOW we were generating a single random value!
-// Math.floor(Math.random() * chosenChars.length);
-
-
-// this adds randomly, and increments by 1 - but the numbers added dont make any sense
+// this adds randomly, and increments by 1 - but the numbers added don't make any sense
 
 // define the new array
 const passwordArray = []
@@ -91,34 +54,6 @@ for (let i = 0; i < pwLength; i++) {
 // }
 
 // so the above loop is preferred since we want it to increment by 1 each loop, NOT 10 at once? 
-
-// let randomPassword = chosenChars.map(function(pwLength) {
-//     // new array to store random seq
-//     // let randomArray = [Math.floor(Math.random() * char.length)]
-//     const randomChars = [Math.floor(Math.random() * pwLength.length)];
-
-//      // take the newArr[random] and add it to the new array
-//      // this creates an array 14 times (not 10)
-//      // AND they are all the same!
-//     return randomArray = randomChars[randomChar];
-// })
-
-
-// console.log('here is a 10 char password:',randomPassword)
-
-// 2 loops? WHY?? Again, think about what we are trying to achieve 
-// return 10 random digits between 0-9 hmm??
-
-// iterate through i, 10 times, add 1 to i each pass 
-for (let i = 0; i < pwLength; i++) {
-    // var to add results to
-    let count = 0;
-    // second loop to get a random digit from chosenChars
-    for (let x = 0; x < Math.floor(Math.random()); x++) {
-        count++;
-    }
-    console.log(count);
-}
 
 // WE GOT THERE! ... AT LAST!!!
 

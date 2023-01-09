@@ -116,8 +116,9 @@ function writePassword() {
 
     // so we now have the function working correctly 
     // randomPassword is putting each digit into the array
-    // but it's STILL printing UNDEFINED to the textfield ??
+    // but it's STILL printing UNDEFINED to the textfield when using main.js
     // WHY? the array 'randomPassword' is now a string 'password' ??
+    // - but we never assigned num to pwLength (should never of been global scope)
 
     // JavaScript interpreter returns undefined when 
     //accessing a variable or object property that is not yet initialized
