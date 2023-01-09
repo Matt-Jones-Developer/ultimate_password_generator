@@ -120,8 +120,8 @@ let loginBtn = document.querySelector('#btn-user');
 // button to heading selector
 let welcomeHeading = document.querySelector('div.header-welcome #user');
 
-// get started button feature 
-let getStartedBtn = document.querySelector('#btn-start');
+// choose options button feature 
+let setOptionsBtn = document.querySelector('#btn-options');
 
 // the generatePassword btn
 // genBtn: references the #generate element
@@ -174,7 +174,7 @@ function setUserName() {
         // debug
         console.log('user set a username')
         // provide feedback (user proof)
-        alert(`Great ${myName}!\nNow you can hit the 'Get Started' button below.`)
+        alert(`Great ${myName}!\nNow you can hit the 'Choose Options' button below.`)
 
     } else {
         // a catch for if the user just wants to cancel; not re-assign username
@@ -196,7 +196,7 @@ function setUserName() {
 // USER PROMPTS START:
 
 // allow user a choice when to start receiving prompts (user UX helper)
-getStartedBtn.onclick = () => {
+setOptionsBtn.onclick = () => {
     getPasswordLength();
 }
 
@@ -358,7 +358,7 @@ function generatePassword() {
     } else {
         // alert
         // ONLY called if optionsAccessed === 1
-        alert("Hey! you haven't chosen any options yet!\nHit the 'Get Started' button first.")
+        alert("Hey! you haven't chosen any options yet!\nHit the 'Choose Options' button first.")
     }
 
     // store randomArray LOCALLY

@@ -297,7 +297,7 @@ textarea {
 
 /* get started header button */
 
-#btn-start {
+#btn-options {
   color: var(--dark);
   background-color: var(--highlight);
   font-size: 22px;
@@ -310,7 +310,7 @@ textarea {
   cursor: pointer;
 }
 
-#btn-start:hover {
+#btn-options:hover {
   color: var(--light);
   background-color: #777;
 }
