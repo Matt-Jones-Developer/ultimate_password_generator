@@ -220,7 +220,7 @@ function getPasswordLength() {
     console.log(`num typeOf: ${typeof (num)}`) // number
     console.log(`chosen length: ${num}`) // chosen length
     // update the user 
-    alert(`Great! Your password length will be ${num}.`)
+    alert(`OK!\nYour password length will be ${num}.`)
 
     // try, catch, finally to call another function after return 
     try {
@@ -340,7 +340,7 @@ function optionsOK() {
     // ready to generate log
     console.log('ready to generate')
     // update the user with choices
-    alert(`Awesome! You have selected ${optionsArray.length} possible characters.\nYou selected types: ${typesSelected}.`)
+    alert(`Awesome!\nYou have selected ${optionsArray.length} possible characters.\nYou selected types: ${typesSelected}.`)
     // update user with chosen types (for fun, why not!)
     alert('You can now hit the GENERATE button below, or start over.')
 
@@ -358,7 +358,7 @@ function generatePassword() {
     } else {
         // alert
         // ONLY called if optionsAccessed === 1
-        alert("Hey! you haven't chosen any options yet!\nHit the 'Choose Options' button first.")
+        alert("Hey!\nYou haven't chosen any options yet.\nHit the 'Choose Options' button first.")
     }
 
     // store randomArray LOCALLY

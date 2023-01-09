@@ -204,7 +204,7 @@ Screenshot of the programs output with
 fully responsive design:
 
 ![tablet-screenshot1]
-![mobile-screenshot2]![mobile-screenshot1]
+![mobile-screenshot2] ![mobile-screenshot1]
 
 Console log:
 
