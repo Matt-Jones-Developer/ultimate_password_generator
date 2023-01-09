@@ -241,3 +241,63 @@ else if (lower && upper && special && !numeric === 'false') {
 }
 
 
+// SOLVED ?
+function getPasswordOptions() {
+
+    // USER PROMPTS
+    let lower = confirm('Do you want lowercase characters?')
+    let upper = confirm("Do you want uppercase characters?")
+    let special = confirm("Do you want special characters?")
+    let numeric = confirm("Do you want numeric characters?")
+
+    // conditional to control booleans selected 
+    if (lower) {
+        // add lowercase chars to the new array 
+        optionsArray = optionsArray.concat(lowerCasedCharacters);
+        // debug
+        console.log('current option1', optionsArray)
+        // add type to types array
+        typesSelected.push('lower');
+        // debug
+        console.log(typesSelected)
+        // debug: check array size 
+        console.log(optionsArray.length)
+    } if (upper) {
+        // add uppercase chars to new array 
+        optionsArray = optionsArray.concat(upperCasedCharacters);
+        // debug
+        console.log('current option2', optionsArray)
+        // add type to types array
+        typesSelected.push('upper');
+        // debug
+        console.log(typesSelected)
+        // debug: check array size 
+        console.log(optionsArray.length)
+    } if (special) {
+        // add special chars to new array
+        optionsArray = optionsArray.concat(specialCharacters);
+        // debug
+        console.log('current option3', optionsArray)
+        // add type to types array
+        typesSelected.push('special');
+        // debug
+        console.log(typesSelected)
+        // debug: check array size 
+        console.log(optionsArray.length)
+    } if (numeric) {
+        // add numerical chars to new array
+        optionsArray = optionsArray.concat(numericCharacters);
+        // debug
+        console.log('current option4', optionsArray)
+        // add type to types array
+        typesSelected.push('numeric');
+        // debug: types selected
+        console.log(typesSelected)
+        // debug: check array size 
+        console.log(optionsArray.length)
+
+    } else {
+        // invoked if NO TYPES == TRUE (0)
+        // restart
+        recallOptions()
+    }

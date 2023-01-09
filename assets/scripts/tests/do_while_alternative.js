@@ -107,6 +107,21 @@ let optionsArray = [];
 getPasswordLength()
 
 // the function
+// function getPasswordLength() {
+
+//     // create a while loop 
+//     let num = 0
+
+//     while (num < 10 || num > 64 || !Number.isInteger(+num));
+//     // update the user 
+//     console.log(`chosen length: ${num}`)
+//     alert(`Great! Your password length will be ${num}.`)
+//     // return num as an integer 
+//     return parseInt(num);
+// }
+
+// need to add else?? -- do?
+
 function getPasswordLength() {
 
     // create a while loop 

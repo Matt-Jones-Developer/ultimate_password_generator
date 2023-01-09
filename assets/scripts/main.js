@@ -2,7 +2,7 @@
 // |*** password generator program ***|
 // |----------------------------------|
 
-// Globals
+// Globals - do any of these need to be global?? NO
 
 // Array of special characters to be included in password
 let specialCharacters = [
@@ -101,17 +101,18 @@ let upperCasedCharacters = [
     'Z'
 ];
 
-// variable to store password length
+// variable to store password length - global required?? NO
 let pwLength = 0;
 
+console.log(`pwlength typeOf: ${typeof (pwLength)}`) // number
 // new array to store user options 
 let optionsArray = [];
-
+console.log(`options typeOf: ${typeof (optionsArray)}`) // number
 // additional tracker array to store types - for fun! - SCOPE?? Why Global??
 let typesSelected = [];
-
-// global random password array - does this NEED to be global also??
-let randomPassword = [];
+console.log(`types typeOf: ${typeof (typesSelected)}`) // number
+// // global random password array - does this NEED to be global also??
+// let randomPassword = [];
 
 // Buttons
 
@@ -177,8 +178,19 @@ function setUserName() {
         alert(`Great ${myName}!\nNow you can hit the Get Started button below.`)
 
     } else {
-        // re-call function
-        recallUserName()
+        // a catch for if the user just wants to cancel; not re-assign username
+        if (!myName) {
+            // alert - boolean
+            let ask = confirm("Do you want to cancel change of username?")
+            // if Y: return to app
+            if (!ask) {
+                // recall
+                recallUserName()
+            }
+        } else {
+            // re-call function
+            recallUserName()
+        }
     }
 }
 
@@ -189,33 +201,17 @@ function setUserName() {
 getStartedBtn.onclick = () => {
     getPasswordLength();
     // debug - to test theory that num is a string which is breaking the logic
-    // BUG FOUND! Now just got to fix parseInt(num) issue 
-    // getPasswordOptions()
+    // BUG FOUND! Now just got to fix parseInt(num) issue + assign num to pwLength
+    // getPasswordOptions();
 }
 
 // setting a password length 
-
-// ********************** MAJOR BUG ISSUE ************************ 
-
-// If I change pwLength to a number globally (say 10) the issue is solved
-// When trying to return num here (either via parseInt() or Number input - both fail)
-
-// Issue 1: 'prompt' will be a string - not a number
-// SOLVE: make it a number!! Number(prompt("..."))
-// this STILL won't fix the issue!
-
-// Issue 2: cannot call getPasswordOptions() AFTER return parseInt(num)
-// SOLVE: added a try, catch, finally -> makes no difference ?
-
-// ***************************************************************
-
-
 function getPasswordLength() {
     // while true
     let num = 0
-    // 'do' until false 
+    // 'do'
     do {
-        num = Number(prompt('Please enter a password length (10-64):'))
+        num = parseInt(prompt('Please enter a password length (10-64):'))
         if (num < 10) {
             alert("Password must be more than 10 characters!")
         } else if (num > 64) {
@@ -231,42 +227,30 @@ function getPasswordLength() {
     // update the user 
     alert(`Great! Your password length will be ${num}.`)
 
-    // // olde way
-    getPasswordOptions()
-    // this will log number 
-    console.log(`num typeOf: ${typeof (num)}`)
-    // return parseInt(num);
-    return num;
+    // // // olde way
+    // getPasswordOptions()
+    // // this will log number 
+    // console.log(`num typeOf: ${typeof (num)}`)
+    // // return parseInt(num);
+    // return num;
     // return;
 
     // try to fix issue with try, catch and finally?? No.
-    // try {
-    //     // return num as an integer
-    //     return parseInt(num);
+        try {
+            // assign num to pwLength
+            pwLength = num;
+            // return parseInt(num);
+            return pwLength;
 
-    // } finally {
-    //     // update log with next move
-    //     console.log('getPasswordOptions calling now...')
-    //     // debug - still a string?  Why?
-    //     // this is the ONLY place that this log will log too
-    //     console.log(`num typeOf: ${typeof (num)}`)
-    //     // call function after return
-    //     getPasswordOptions()
-    // }
-    // try {
-    //     // update log with next move
-    //     console.log('getPasswordOptions calling now...')
-    //     // debug - still a string?  Why?
-    //     // this is the ONLY place that this log will log too
-    //     console.log(`num typeOf: ${typeof (num)}`)
-    //     // call function after return
-    //     getPasswordOptions()
-
-
-    // } finally {
-    //     // return num as an integer
-    //     return parseInt(num);
-    // }
+        } finally {
+            // update log with next move
+            console.log('getPasswordOptions calling now...')
+            // debug - still a string?  Why?
+            // this is the ONLY place that this log will log too
+            console.log(`pwLength typeOf: ${typeof (pwLength)}`)
+            // call function after return
+            getPasswordOptions()
+        }
 }
 
 // function to confirm the boolean options 
@@ -279,11 +263,12 @@ function getPasswordOptions() {
     let numeric = confirm("Do you want numeric characters?")
 
     // conditional to control booleans selected 
+    // would a switch statement be better here?
     if (lower) {
         // add lowercase chars to the new array 
         optionsArray = optionsArray.concat(lowerCasedCharacters);
         // debug
-        console.log('current option1', optionsArray)
+        console.log('option1:lower', optionsArray)
         // add type to types array
         typesSelected.push('lower');
         // debug
@@ -294,7 +279,7 @@ function getPasswordOptions() {
         // add uppercase chars to new array 
         optionsArray = optionsArray.concat(upperCasedCharacters);
         // debug
-        console.log('current option2', optionsArray)
+        console.log('option2:upper', optionsArray)
         // add type to types array
         typesSelected.push('upper');
         // debug
@@ -305,7 +290,7 @@ function getPasswordOptions() {
         // add special chars to new array
         optionsArray = optionsArray.concat(specialCharacters);
         // debug
-        console.log('current option3', optionsArray)
+        console.log('option3:special', optionsArray)
         // add type to types array
         typesSelected.push('special');
         // debug
@@ -316,7 +301,7 @@ function getPasswordOptions() {
         // add numerical chars to new array
         optionsArray = optionsArray.concat(numericCharacters);
         // debug
-        console.log('current option4', optionsArray)
+        console.log('option4:nums', optionsArray)
         // add type to types array
         typesSelected.push('numeric');
         // debug: types selected
@@ -326,7 +311,7 @@ function getPasswordOptions() {
 
     } else {
         // invoked if NO TYPES == TRUE (0)
-        // restart
+        // re-call
         recallOptions()
     }
 
@@ -354,7 +339,7 @@ function optionsOK() {
     // update the user with choices
     alert(`Awesome! You have selected ${optionsArray.length} possible characters.\nYou selected types: ${typesSelected}.`)
     // update user with chosen types (for fun, why not!)
-    alert('You can now hit the GENERATE button below.  Good work!')
+    alert('You can now hit the GENERATE button below, or start over.')
     // // debug: testing getRandom
     // getRandom()
 
@@ -363,8 +348,8 @@ function optionsOK() {
 // generate a random password (random + generate code merge) 
 function generatePassword() {
 
-    // // store the randomArray LOCALLY
-    // let randomPassword = [];
+    // store the randomArray LOCALLY
+    let randomPassword = [];
 
     // iterate through i, 10 times
     for (let i = 0; i < pwLength; i++) {
@@ -406,10 +391,26 @@ function writePassword() {
     // check type: (string)
     console.log(`password type: ${typeof (password)}`)
     // get string length
-    // this claims its UNDEFINED IF return is used
-    // console.log('password length:', password.length)
-
-    // return password;
+    console.log('password length:', password.length)
 
 }
+
+// copy to clipboard button feature 
+
+function copyText() {
+      
+    /* Select text area by id*/
+    let copyText = document.getElementById("password");
+
+    // Select the text field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+
+     // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+  
+    // user feedback - element change to 'password copied!'
+    copy_notice.innerHTML = 'Password copied!';
+}
+
 

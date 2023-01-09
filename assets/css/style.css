@@ -17,6 +17,19 @@
   rgba(76, 76, 76, 0.6));
 }
 
+/* fade-in */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* init */
+
 *,
 *::before,
 *::after {
@@ -273,6 +286,15 @@ textarea {
   color: hsl(206, 17%, 28%);
 }
 
+.header-welcome h1,h3 {
+  /* animation: fadeIn 1s ease-in 0 1 normal none; */
+  animation: fadeIn;
+  animation-duration: 1s;
+  /* -webkit-animation: fadeIn 1s ease-in 0 1 normal none; */
+  -webkit-animation: fadeIn;
+  -webkit-animation-duration: 1s;
+}
+
 /* get started header button */
 
 #btn-start {
@@ -344,6 +366,30 @@ textarea {
   clear: both;
 }
 
+/* password textfield */
+
+#password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
+  color: var(--dark);
+}
+
 /* copy icon btn */
 
 #copy {
@@ -378,27 +424,6 @@ textarea {
   background-color: #777;
 }
 
-#password {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  display: block;
-  width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
-  border-radius: 6px;
-  resize: none;
-  overflow: hidden;
-}
-
 /* footer */
 
 .footer {
@@ -422,7 +447,23 @@ textarea {
 
 /* media queries */
 
-@media (max-width: 800px) {
+/* ipad 12.9 */
+@media (max-width: 1024px) {
+  .header-welcome h1 {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .header-welcome h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 810px) {
+  .header-welcome h1 {
+    font-size: 4.5rem;
+  }
   .card {
     margin-left: 2rem;
     margin-right: 2rem;
@@ -432,7 +473,7 @@ textarea {
 @media (max-width: 690px) {
 
   h1 {
-    font-size: 60px;
+    font-size: 4rem;
   }
 
   h2 {
@@ -504,6 +545,10 @@ textarea {
     margin-bottom: -2rem;
   }
 
+  .get-started {
+    margin-bottom: 2rem;
+  }
+
   .nav-left a {
     font-size: 14px;
   }
@@ -532,9 +577,10 @@ textarea {
 
 @media (max-width: 375px) {
 
-  h1 {
-    font-size: 48px;
+  .header-welcome h1 {
+    font-size: 54px;
   }
+
   h2 {
     font-size: 22px;
     margin-bottom: 0rem;
@@ -553,6 +599,10 @@ textarea {
 
   .header {
     margin-bottom: -2rem;
+  }
+
+  .get-started {
+    margin-bottom: 2rem;
   }
 
   .nav-left a {
@@ -594,9 +644,10 @@ textarea {
 
 @media (max-width: 320px) {
 
-  h1 {
+  .header-welcome h1 {
     font-size: 48px;
   }
+
   h2 {
     font-size: 17px;
     margin-top: -1rem;
@@ -608,10 +659,18 @@ textarea {
   }
 
   small {
-    font-size: 12px;
+    font-size: 10px;
     position: absolute;
     top: 1.6rem;
     left: 8.5rem;
+  }
+
+  ::placeholder {
+    font-size: 12px;
+  }
+
+  .footer-text strong {
+    font-size: 9px;
   }
 
   .header {

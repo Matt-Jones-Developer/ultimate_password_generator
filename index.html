@@ -34,78 +34,77 @@
             </div>
         </div>
     </nav>
-    <!-- page wrapper - required? No. -->
-    <div class="wrapper">
-        <!-- project header -->
-        <header class="header">
-            <div class="header-welcome">
-                <h1>Ultimate Password Generator</h1>
-                <h3 id="user">Welcome, please Log-in!</h3>
-            </div>
-            <div class="get-started">
-                <button id="btn-start">Get Started</button>
-            </div>
-        </header>
-        <!-- section: generator box -->
-        <section class="generator">
-            <div class="container">
-                <div class="boxes">
-                    <div class="box">
-                        <!-- card -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h2>Generate Password</h2>
-                            </div>
-                            <div class="card-body">
-                                <textarea readonly id="password" placeholder="Your Secure Password"
-                                    aria-label="Generated Password"></textarea>
-                            </div>
-                            <div class="copy-strip">
-                                <!-- copy pw button icon -->
-                                <h4>Copy to clipboard</h4>
-                                <button id="copy" class="btn_copy">
-                                    <img src="./assets/images/icons/icn_add_circle_wht.svg" alt="copy-icn">
-                                </button>
-                            </div>
-                            <!-- generate button -->
-                            <div class="card-footer">
-                                <button id="generate" class="btn-gen">GENERATE</button>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
+
+    <!-- project header -->
+    <header class="header">
+        <div class="header-welcome">
+            <h1>Ultimate Password Generator</h1>
+            <h3 id="user">Welcome, please Log-in!</h3>
+        </div>
+        <div class="get-started">
+            <button id="btn-start">Get Started</button>
+        </div>
+    </header>
+
+    <!-- section: generator box -->
+    <section class="generator">
+        <div class="container">
+            <!-- card -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Generate Password</h2>
                 </div>
-                <!-- end boxes -->
+                <div class="card-body">
+                    <textarea readonly id="password" placeholder="Your Secure Password"
+                        aria-label="Generated Password"></textarea>
+                </div>
+                <div class="copy-strip">
+                    <!-- copy pw button icon -->
+                    <h4 id="copy_notice">Copy to clipboard</h4>
+                    <button id="copy" class="btn_copy" onclick="copyText()">
+                        <img src="./assets/images/icons/icn_add_circle_wht.svg" alt="copy-icn">
+                    </button>
+
+                </div>
+                <!-- generate button -->
+                <div class="card-footer">
+                    <button id="generate" class="btn-gen">GENERATE</button>
+                </div>
             </div>
-        </section>
-        <footer class="footer">
-            <!-- footer social icons -->
-            <div class="footer-icons">
-                <ul class="ul-icons">
-                    <li><a href="#"><img src="./assets/images/icons/icn_mail_wht.svg" width="24px" height="24px"
-                                alt="mail-icn"></a></li>
-                    <li><a href="https://github.com/Matt-Jones-Developer" class="git-icn"><img
-                                src="./assets/images/icons/github_icn_wht.svg" width="24px" height="24px"
-                                alt="github-icn"></a></li>
-                    <li><a href="https://glitchygames.slack.com"><img src="./assets/images/icons/slack_color.svg"
-                                width="24px" height="24px" alt="slack-icn"></a></li>
-                    <li><a href="https://twitter.com/glitchy81_dev"><img src="./assets/images/icons/icn_twitter_wht.svg"
-                                width="24px" height="24px" alt="twitter-icn"></a></li>
-                    <li><a href="https://www.linkedin.com/in/matt-jones-zx81/"><img src="./assets/images/icons/icn_linkedin.svg" width="24px" height="24px"
-                                alt="linkedin-icn"></a></li>
-                </ul>
-            </div>
-            <div class="footer-text">
-                <p>
-                    Designed & <code style="color:#A0FCD6;">coded</code> with <strong>love</strong>
-                    by <a href="https://github.com/Matt-Jones-Developer">Matt Jones</a>. &copy; 2022. All rights
-                    reserved.
-                </p>
-                <br>
-            </div>
-        </footer>
-    </div>
-    <script src="./assets/scripts/main.js"></script>   
+            <!-- end card -->
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <!-- footer icons -->
+        <div class="footer-icons">
+            <ul class="ul-icons">
+                <li><a href="#"><img src="./assets/images/icons/icn_mail_wht.svg" width="24px" height="24px"
+                            alt="mail-icn"></a></li>
+                <li><a href="https://github.com/Matt-Jones-Developer" class="git-icn"><img
+                            src="./assets/images/icons/github_icn_wht.svg" width="24px" height="24px"
+                            alt="github-icn"></a></li>
+                <li><a href="https://glitchygames.slack.com"><img src="./assets/images/icons/slack_color.svg"
+                            width="24px" height="24px" alt="slack-icn"></a></li>
+                <li><a href="https://twitter.com/glitchy81_dev"><img src="./assets/images/icons/icn_twitter_wht.svg"
+                            width="24px" height="24px" alt="twitter-icn"></a></li>
+                <li><a href="https://www.linkedin.com/in/matt-jones-zx81/"><img
+                            src="./assets/images/icons/icn_linkedin.svg" width="24px" height="24px"
+                            alt="linkedin-icn"></a></li>
+            </ul>
+        </div>
+        <!-- footer footer -->
+        <div class="footer-text">
+            <p>
+                Designed & <code style="color:#A0FCD6;">coded</code> with <strong>love</strong>
+                by <a href="https://github.com/Matt-Jones-Developer">Matt Jones</a>. &copy; 2022. All rights
+                reserved.
+            </p>
+            <br>
+        </div>
+    </footer>
+    <!-- scripts -->
+    <script src="./assets/scripts/main.js"></script>
     <!-- <script src="./assets/scripts/tests/write.js"></script> -->
 </body>
 
