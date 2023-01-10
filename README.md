@@ -96,23 +96,23 @@ I asked my family to test this app, an older member said they didn't really 'get
 
 Although the 'Choose Options' button IS an extra step, I think it makes it more enjoyable to use.  I like that if you make a mistake you can simply repeat the options before any passwords are generated. 
 
-I still have the prompts and alerts (as per the criteria) so I hope this will not affect my grade.  It was a UX design choice that I chose to make.  If I get marked down for this, I will re-submit without the additional button.
+I still have the prompts and alerts (as per the criteria) so I hope this will not affect my grade.  It was a UX design choice that I chose to make.  If I get marked down for it, I will re-submit without the additional button.
 
 Adding this button created a new set of bugs and problems, but I got through it and fixed them.  Sometimes (most times?) simple is better!
 
 I am happy with how the app looks, its fully mobile and tablet responsive and I am very glad I took a break from the logic side of the task halfway through to actually customise the app and make it unique.  This was in accordance with my initial wireframing and UX design features and improvements that I designed before starting out this project.  I am proud of this effort.
 
-The main criteria involved using vanilla JavaScript only, so I started off by pseudo-coding the entire logical steps for the program to work as intended.  I find my pseudo is slowly improving, however I usually miss steps that then lead to bugs, however I really enjoy getting stuck in to solving them, so I am sure I will improve as time goes on.
+The main criteria involved vanilla JavaScript only, so I started off by pseudo-coding the entire logical steps for the program to work as intended.  I find my pseudo is slowly improving, however I usually miss steps that then lead to bugs, however I really enjoy getting stuck in to solving them, so I am sure I will improve as time goes on.
 
-I have included my 'working.js' file to show you the amount of work I put into to figuring out the solutions for myself, rather than relying on others or google.  I did contact AskBCS a once about for some minor bug (a tiny error on my part) but feel that I deserved to have some assistance in ironing that out.
+I have included my 'working.js' file to show you the amount of work I put into to figuring out the solutions for myself, rather than relying on others or google.  I did contact AskBCS once about some minor bug, but feel that I deserved to have some assistance in ironing that out.
 
-I realise that having the vars as global is bad practice but I felt it worked and a lot of other functions access them, so I will switch out for local and refactor/improve upon this logic in the future.
+I realise that having the variables as global is bad practice but I felt it worked and a lot of other functions access them, so I will switch out for local and refactor/improve upon this logic in the future.
 
-Another huge lesson learnt: I had the full working solution within the random.js file - I copied it to main.js but forgot to change a variable name to match the main.js - instead of finding this, I quickly started messing with the working file!  I usually make a point to comment it out and make a copy before editing, but didn't.  I then tried to undo but couldn't get it back to a working state. It took my several more attempts before getting it working again.
+Another huge lesson learnt: I had the full working solution within the random.js file - I copied it to main.js but forgot to change a variable name to match the main.js - instead of finding this, I quickly started messing with the working file!  I usually make a point to comment it out and make a copy before editing, but didn't.  I then tried to undo but couldn't get it back to a working state. It took me several more attempts before getting it working again.  I welcome errors as a chance to learn and cement it better.
 
-Yes, the working.js file is messy, unreadable in places, but it got my program to where it is now.  I finally ironed out a lot of these bugs and even refactored older code into better ideas as they cropped up.
+Yes, the working.js file is messy, unreadable in places, but it got my program working.  I finally ironed out a lot of these bugs and even refactored older code into better ideas as they cropped up.  A good lesson regarding the return statement and understanding Separation of Concerns too.
 
-I felt my addition of functions helped readability, debugging and will allow for easier maintenance in the future.   I could also argue there's way too many lines of code for what was required, but I am still learning so I gave myself freedom to experiment. 
+I felt my addition of functions helped readability, debugging and will allow for easier maintenance in the future.  One could also argue there's way too many lines of code for what was required, but I am still learning so I gave myself freedom to experiment. 
 
 I intend to be an excellent programmer one day and I am a firm believer that practice and hard work will get me there. 
 
