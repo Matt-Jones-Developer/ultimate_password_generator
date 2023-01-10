@@ -44,9 +44,9 @@
     <a href="https://github.com/Matt-Jones-Developer/password_generator/issues">Report Bug</a>
     ·
     <a href="https://github.com/Matt-Jones-Developer/password_generator/issues">Request Feature</a>
-    .
+    ·
     <a href="https://github.com/Matt-Jones-Developer?tab=repositories">Check out my work</a>
-    .
+    ·
   </p>
 </div>
 
