@@ -25,7 +25,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Matt-Jones-Developer/password_generator">
+  <a href="https://github.com/Matt-Jones-Developer/ultimate_password_generator">
     <img src="assets/images/keyng-icon_sml.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -36,14 +36,14 @@
     A simple webapp that a allows a user to create a unique password.  They can also log-in and change their username.
     Coded in vanilla JavaScript with an HTML and CSS interactive GUI.
     <br />
-    <a href="https://github.com/Matt-Jones-Developer/password_generator/"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Matt-Jones-Developer/ultimate_password_generator/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Matt-Jones-Developer/password_generator">View Project</a>
+    <a href="https://github.com/Matt-Jones-Developer/ultimate_password_generator">View Project</a>
     ·
-    <a href="https://github.com/Matt-Jones-Developer/password_generator/issues">Report Bug</a>
+    <a href="https://github.com/Matt-Jones-Developer/ultimate_password_generator/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Matt-Jones-Developer/password_generator/issues">Request Feature</a>
+    <a href="https://github.com/Matt-Jones-Developer/ultimate_password_generator/issues">Request Feature</a>
     ·
     <a href="https://github.com/Matt-Jones-Developer?tab=repositories">Check out my work</a>
     ·
@@ -126,7 +126,7 @@ There is always time for reminders using google once I am a better programmer, b
 
 Product screenshot:
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/Matt-Jones-Developer/password_generator)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/Matt-Jones-Developer/ultimate_password_generator)
 
 ## Criteria
 
@@ -236,7 +236,7 @@ Console log:
 
 Screenshot of the web apps UI design stage:
 
-[![Design Screen Shot][wireframe-screenshot]](https://github.com/Matt-Jones-Developer/password_generator)
+[![Design Screen Shot][wireframe-screenshot]](https://github.com/Matt-Jones-Developer/ultimate_password_generator)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -267,10 +267,10 @@ Matt Jones - [@glitchy81_dev](https://twitter.com/glitchy81_dev)
 
 ## Project links
 
-Project Repo Link: [https://github.com/Matt-Jones-Developer/password_generator](https://github.com/Matt-Jones-Developer/password_generator)
+Project Repo Link: [https://github.com/Matt-Jones-Developer/password_generator](https://github.com/Matt-Jones-Developer/ultimate_password_generator)
 
 
-Deployed Project Link: [https://matt-jones-developer.github.io/password_generator](https://matt-jones-developer.github.io/password_generator)
+Deployed Project Link: [https://matt-jones-developer.github.io/password_generator](https://matt-jones-developer.github.io/ultimate_password_generator)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -287,16 +287,16 @@ Deployed Project Link: [https://matt-jones-developer.github.io/password_generato
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/matt-jones-developer/password_generator.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/matt-jones-developer/ultimate_password_generator.svg?style=for-the-badge
 [contributors-url]: https://github.com/matt-jones-developer/password_generator/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/matt-jones-developer/password_generator.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/matt-jones-developer/ultimate_password_generator.svg?style=for-the-badge
 [forks-url]: https://github.com/Matt-Jones-Developer/password_generator/network/members
-[stars-shield]: https://img.shields.io/github/stars/matt-jones-developer/password_generator.svg?style=for-the-badge
-[stars-url]: https://matt-jones-developer.github.io/password_generator/stargazer
-[issues-shield]: https://img.shields.io/github/issues/matt-jones-developer/password_generator.svg?style=for-the-badge
-[issues-url]: https://github.com/Matt-Jones-Developer/password_generator/issues
-[license-shield]: https://img.shields.io/github/license/matt-jones-developer/password_generator.svg?style=for-the-badge
-[license-url]: https://github.com/Matt-Jones-Developer/password_generator/blob/main/LICENSE.txt
+[stars-shield]: https://img.shields.io/github/stars/matt-jones-developer/ultimate_password_generator.svg?style=for-the-badge
+[stars-url]: https://matt-jones-developer.github.io/ultimate_password_generator/stargazer
+[issues-shield]: https://img.shields.io/github/issues/matt-jones-developer/ultimate_password_generator.svg?style=for-the-badge
+[issues-url]: https://github.com/Matt-Jones-Developer/ultimate_password_generator/issues
+[license-shield]: https://img.shields.io/github/license/matt-jones-developer/ultimate_password_generator.svg?style=for-the-badge
+[license-url]: https://github.com/Matt-Jones-Developer/ultimate_password_generator/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: www.linkedin.com/in/matt-jones-zx81
 [product-screenshot]: assets/images/screenshots/app-screenshot-final.png
