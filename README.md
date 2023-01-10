@@ -256,7 +256,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/glitchy81_dev)
+Matt Jones - [@glitchy81_dev](https://twitter.com/glitchy81_dev)
 
 #
 
