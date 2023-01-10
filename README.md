@@ -204,8 +204,12 @@ Screenshot of the programs output with
 fully responsive design:
 
 ![tablet-screenshot1]
-![mobile-screenshot1] ![mobile-screenshot2]
-
+<!-- centered images -->
+<div align="center">
+<!-- ![mobile-screenshot1] ![mobile-screenshot2] -->
+  <img src="assets/images/screenshots/pw_gen_mobile-screenshot1.png">
+  <img src="assets/images/screenshots/pw_gen_mobile-screenshot2.png">
+</div>
 Console log:
 
 ![console-output-screenshot]
