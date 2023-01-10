@@ -204,6 +204,7 @@ Screenshot of the programs output with
 fully responsive design:
 
 ![tablet-screenshot1]
+
 <!-- centered images -->
 <div align="center">
 <!-- ![mobile-screenshot1] ![mobile-screenshot2] -->
@@ -298,7 +299,7 @@ Deployed Project Link: [https://matt-jones-developer.github.io/password_generato
 [license-url]: https://github.com/Matt-Jones-Developer/password_generator/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: www.linkedin.com/in/matt-jones-zx81
-[product-screenshot]: assets/images/screenshots/app-screenshot.png
+[product-screenshot]: assets/images/screenshots/app-screenshot-final.png
 [console-output-screenshot]: assets/images/screenshots/console_output_screenshot.png
 [wireframe-screenshot]: ./assets/images/screenshots/wireframing_screenshot.png
 [tablet-screenshot1]: ./assets/images/screenshots/pw_gen_ipad-screenshot.png
