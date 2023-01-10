@@ -178,7 +178,7 @@ Once complete, you hit the GENERATE button - the password generated will be prin
 As another UX feature, I wanted the user to be able to quick copy the password, using the '+' icon - I am happy with the UX flow on this and feel that whilst alerts and prompts wouldn't be my first choice, they work quite well and it's fun to use. I feel undecided about the addition of the 'choose options' button and may remove it.
 
 Please open main.js within the scripts folder to view my JS code. 
-You can also see my working.js for all the tinkering and coding revisions I made to reach my solutions.
+You can also see my tests folder for all the testing, tinkering and coding revisions I made to reach my solutions.
 
 #
 ### Prerequisites
